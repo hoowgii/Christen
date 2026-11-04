@@ -1,0 +1,26 @@
+<footer class="voet">
+  <div class="wrap voet__binnen">
+    <div class="voet__merk">
+      <a class="logo logo--licht" href="{{ T.pre }}/" aria-label="{{ T.t.logoLabel }}">Christen<span class="logo__en">&amp;</span></a>
+      <p>{{ T.t.voetTekst }}</p>
+      <p class="voet__noot">{{ T.t.voetNoot }}</p>
+    </div>
+    <nav aria-label="{{ T.t.rubrieken }}">
+      <h2 class="voet__kop">{{ T.t.rubrieken }}</h2>
+      <ul>{% for r in T.rubrieken %}<li><a href="{{ r.url }}">{{ r.naam }}</a></li>{% endfor %}</ul>
+    </nav>
+    <nav aria-label="{{ T.t.overDezeSite }}">
+      <h2 class="voet__kop">{{ T.t.overDezeSite }}</h2>
+      <ul>
+        <li><a href="{{ T.t.urls.over }}">{{ T.t.over }}</a></li>
+        <li><a href="{{ T.t.urls.over }}#{{ 'redactie' if lang == 'nl' else 'editorial' }}">{{ T.t.redactie }}</a></li>
+        <li><a href="{{ T.t.urls.over }}#{{ 'bronnen' if lang == 'nl' else 'sources' }}">{{ T.t.bronnen }}</a></li>
+        <li><a href="{{ T.t.urls.over }}#contact">{{ T.t.contact }}</a></li>
+        <li><a href="{{ T.t.urls.over }}#privacy">{{ T.t.privacy }}</a></li>
+        <li><a href="{{ T.t.urls.disclaimer }}">{{ T.t.disclaimer }}</a></li>
+        <li><a href="{{ T.t.urls.onderwerpen }}">{{ T.t.onderwerpen }}</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap voet__onder"><p>© {{ jaar }} Christen&amp;</p></div>
+</footer>

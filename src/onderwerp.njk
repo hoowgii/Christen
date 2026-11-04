@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: inhoud.paginaOnderwerpen
+  size: 1
+  alias: p
+  addAllPagesToCollections: true
+permalink: "{{ p.url }}"
+eleventyComputed:
+  lang: "{{ p.lang }}"
+  title: "{{ p.label | hoofdletter }}"
+---
+{% set T = inhoud.talen[lang] %}
+{% from "partials/kruimel.njk" import kruimel %}
+<div class="wrap pagina">
+  {{ kruimel([{ "naam": site.naam, "url": T.pre + "/" }, { "naam": T.t.onderwerpen, "url": T.t.urls.onderwerpen }, { "naam": p.label | hoofdletter, "url": p.url }], T, site) }}
+  <header class="paginakop">
+    <h1>{{ p.label | hoofdletter }}</h1>
+    <p class="intro">{{ T.t.onderwerpIntro }}</p>
+  </header>
+  {% set lijst = T.items | metTag(p.key) %}{% set toonPlek = true %}
+  {% include "partials/itemlijst.njk" %}
+</div>

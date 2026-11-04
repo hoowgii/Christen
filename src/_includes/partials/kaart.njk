@@ -1,0 +1,28 @@
+{% macro kaart(item, T, toonPlek) %}
+<article class="item" data-tags="{{ item.tagKeys | join('|') }}">
+  <h3 class="item__titel">
+    {%- if item.url and not item.kanalen.length %}<a href="{{ item.url }}" rel="noopener">{{ item.titel }}</a>{% else %}{{ item.titel }}{% endif -%}
+  </h3>
+  {% if item.auteur %}<p class="item__auteur">{{ item.auteur }}</p>{% endif %}
+  <p class="item__tekst">{{ item.omschrijving }}</p>
+  {% if toonPlek and item.plek %}<p class="item__plek">{{ T.t.in }} <a href="{{ item.plek.url }}">{{ item.plek.naam }}</a></p>{% endif %}
+  <div class="item__voet">
+    {% if item.kanalen.length %}
+      <ul class="item__kanalen">
+        {% for k in item.kanalen %}
+        <li><a class="knop knop--rand" href="{{ k.url }}" rel="noopener{% if k.partner %} sponsored{% endif %}">{{ T.t.bekijkBij }} {{ k.aanbieder }}<span class="sr"> {{ T.t.extern }}</span></a></li>
+        {% endfor %}
+      </ul>
+    {% elif item.url %}
+      <p class="item__domein"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>{{ item.url | domein }}<span class="sr"> {{ T.t.extern }}</span></p>
+    {% else %}
+      <p class="item__domein">{{ T.t.linkVolgt }}</p>
+    {% endif %}
+    {% if item.tags.length %}
+      <ul class="item__tags" aria-label="{{ T.t.onderwerpen }}">
+        {% for t in item.tags %}<li><a href="{{ t.url }}">{{ t.label }}</a></li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>
+{% endmacro %}

@@ -1,0 +1,34 @@
+# & Nieuws – zie _LEESMIJ.md voor uitleg van de velden
+volgorde: 6
+slug: nieuws
+slug_en: news
+naam: Nieuws
+naam_en: News
+kort: Nieuws en achtergronden vanuit christelijk perspectief.
+kort_en: News and background from a Christian perspective.
+intro: Op de hoogte blijven van wat er in kerk en wereld gebeurt, vanuit christelijk perspectief.
+intro_en: Keeping up with what happens in the church and in the world, from a Christian perspective.
+
+items:
+  - titel: Reformatorisch Dagblad
+    url: https://www.rd.nl/
+    omschrijving: Het laatste christelijke nieuws en achtergronden.
+    omschrijving_en: The latest Christian news and background. In Dutch.
+    type: website
+    tags: [nieuws]
+
+  # VOORSTEL Claude – houden of verwijderen?
+  - titel: Nederlands Dagblad
+    url: https://www.nd.nl
+    omschrijving: Christelijk dagblad met nieuws, opinie en achtergronden.
+    omschrijving_en: Christian daily newspaper with news, opinion and background. In Dutch.
+    type: website
+    tags: [nieuws]
+
+  # VOORSTEL Claude – houden of verwijderen?
+  - titel: CIP
+    url: https://cip.nl
+    omschrijving: Christelijk nieuwsplatform met nieuws uit kerk en samenleving.
+    omschrijving_en: Christian news platform covering church and society. In Dutch.
+    type: website
+    tags: [nieuws]

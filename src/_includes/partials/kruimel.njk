@@ -1,0 +1,8 @@
+{% macro kruimel(stappen, T, site) %}
+<nav class="kruimel" aria-label="{{ T.t.kruimel }}"><ol>
+  {%- for s in stappen %}
+  <li{% if loop.last %} aria-current="page"{% endif %}>{% if not loop.last %}<a href="{{ s.url }}">{{ s.naam }}</a>{% else %}{{ s.naam }}{% endif %}</li>
+  {%- endfor %}
+</ol></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{% for s in stappen %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ s.naam | json | safe }},"item":{{ (site.url + s.url) | json | safe }}}{% if not loop.last %},{% endif %}{% endfor %}]}</script>
+{% endmacro %}

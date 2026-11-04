@@ -1,0 +1,62 @@
+# & Zingen – zie _LEESMIJ.md voor uitleg van de velden
+volgorde: 3
+slug: zingen
+slug_en: singing
+naam: Zingen
+naam_en: Singing
+kort: Psalmen en christelijke muziek, voor kerk en thuis.
+kort_en: Psalms and Christian music, for church and home.
+intro: Zingen tot eer van God, in de eredienst en thuis aan tafel. In veel gereformeerde gemeenten staan daarbij de psalmen centraal.
+intro_en: Singing to the glory of God, in worship and at home around the table. In many Reformed congregations the psalms are central.
+tekst: |
+  ### Wat zijn de psalmen?
+  De psalmen zijn de 150 liederen uit het bijbelboek Psalmen. In veel gemeenten worden ze gezongen in een berijming: een vertaling op rijm, zodat ze op een melodie te zingen zijn. Op [psalmboek.nl](https://psalmboek.nl/) vind je de teksten.
+
+  ### Hoe zingen we ze?
+  Dat verschilt per gemeente. In de ene gemeente wordt ritmisch gezongen, in de andere op hele noten: rustiger, met alle noten even lang. Zing gewoon mee met de gemeente waar je komt.
+
+  ### Een medicijnkast voor de christen
+  De psalmen zijn als een medicijnkast. Je vindt er woorden om je ellende, je verlossing en je dankbaarheid tegenover God uit te spreken. Ook als je niets begrijpt van wat er in je leven gebeurt, geven de psalmen je woorden om tot God te gaan.
+
+  ### Luisteren
+  Veel psalmen zijn ook gezongen te beluisteren, bijvoorbeeld via [Nederland Zingt](https://www.youtube.com/@NederlandZingt). Krijg je geen genoeg van christelijke muziek, dan is er bijvoorbeeld [Groot Nieuws Radio](https://www.grootnieuwsradio.nl/), en zijn er andere christelijke radiozenders, met een breed aanbod of juist alleen psalmen.
+tekst_en: |
+  ### What are the psalms?
+  The psalms are the 150 songs of the Book of Psalms in the Bible. Many congregations sing them in a metrical version: a rhymed translation that can be sung to a melody. You can find the Dutch texts on [psalmboek.nl](https://psalmboek.nl/).
+
+  ### How are they sung?
+  That differs per congregation. Some sing rhythmically, others in equal notes: slower, with every note the same length. Simply sing along with the congregation you attend.
+
+  ### A medicine cabinet for the Christian
+  The psalms are like a medicine cabinet. They give you words to express your misery, your deliverance and your gratitude before God. Even when you do not understand what is happening in your life, the psalms give you words to come to God.
+
+  ### Listening
+  Many psalms can also be heard sung, for example through [Nederland Zingt](https://www.youtube.com/@NederlandZingt). And if you cannot get enough of Christian music, there is for example [Groot Nieuws Radio](https://www.grootnieuwsradio.nl/), and other Christian radio stations, with a wide range or with psalms only.
+
+items:
+  - titel: Psalmboek.nl
+    url: https://psalmboek.nl/
+    omschrijving: De teksten van de psalmen, om te lezen en mee te zingen.
+    omschrijving_en: The texts of the metrical psalms, to read and sing along. In Dutch.
+    type: website
+    tags: [psalmen, voor beginners]
+
+  - titel: Nederland Zingt (EO)
+    url: https://www.youtube.com/@NederlandZingt
+    omschrijving: YouTube-kanaal met veel gezongen psalmen en geestelijke liederen.
+    omschrijving_en: YouTube channel with many sung psalms and hymns. In Dutch.
+    type: video
+    tags: [psalmen, muziek]
+
+  - titel: Groot Nieuws Radio
+    url: https://www.grootnieuwsradio.nl/
+    omschrijving: Christelijke radiozender met een grote verscheidenheid aan liederen.
+    omschrijving_en: Christian radio station with a wide variety of songs. In Dutch.
+    type: radio
+    tags: [muziek, radio]
+
+  - titel: Blijde Klanken
+    omschrijving: Radiostation voor wie zich meer wil beperken tot psalmen.
+    omschrijving_en: Radio station for those who prefer to listen mainly to psalms.
+    type: radio
+    tags: [psalmen, radio]

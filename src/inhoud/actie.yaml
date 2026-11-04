@@ -1,0 +1,79 @@
+# & Actie – zie _LEESMIJ.md voor uitleg van de velden
+volgorde: 8
+slug: actie
+slug_en: action
+naam: Actie
+naam_en: Action
+kort: Omzien naar elkaar, dichtbij en ver weg.
+kort_en: Caring for one another, near and far.
+intro: Als christenen weten we ons verbonden met onze broeders en zusters, en zorgen we voor elkaar. Dat is een Bijbelse opdracht (Galaten 6:10).
+intro_en: As Christians we know we are bound to our brothers and sisters, and we care for one another. That is a Biblical calling (Galatians 6:10).
+tekst: |
+  Veel scholen en ziekenhuizen in Europa zijn ontstaan vanuit dat omzien naar elkaar. Nog altijd wordt er op allerlei terreinen (extra) naar elkaar omgekeken, op heel verschillende manieren. Hieronder een greep.
+
+  Ook dichtbij zijn er veel initiatieven: zendingsechtparen uit je eigen gemeente, de voedselbank, bezoekcommissies en meer. Vraag in je eigen gemeente waar je kunt helpen.
+tekst_en: |
+  Many schools and hospitals in Europe grew out of this care for one another. To this day people look out for each other in many areas and in very different ways. Here is a selection.
+
+  There are also many initiatives close to home: missionary couples from your own congregation, the food bank, visiting committees and more. Ask in your own congregation where you can help.
+
+items:
+  - titel: SDOK
+    url: https://www.sdok.nl/
+    omschrijving: Niet in elk land is het vanzelfsprekend dat je openlijk christen kunt zijn. Richard Wurmbrand ondervond dat aan den lijve. Zijn verhaal was onder meer de inspiratie voor SDOK, dat naast vervolgde christenen staat.
+    omschrijving_en: Not every country allows you to be openly Christian. Richard Wurmbrand experienced this first-hand. His story inspired, among others, SDOK, which stands alongside persecuted Christians. In Dutch.
+    type: organisatie
+    tags: [vervolgde kerk, sdok]
+
+  - titel: Tortured for Christ
+    auteur: Richard Wurmbrand
+    omschrijving: Op 29 februari 1948 werd Richard Wurmbrand door de geheime politie gearresteerd. Zijn misdaad? Het leiden van christelijke diensten en getuigen van zijn geloof. Zijn verhaal over vervolging en trouw.
+    omschrijving_en: On February 29, 1948, Richard Wurmbrand was arrested by the secret police. His crime? Leading Christian worship and witnessing. His story of persecution and faithfulness.
+    type: boek
+    tags: [vervolgde kerk]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0db5M7oq", partner: true }
+
+  - titel: Gevangenenzorg Nederland
+    url: https://gevangenenzorg.nl/
+    omschrijving: Geloof in herstel. Aandacht en bezoek voor gevangenen.
+    omschrijving_en: Faith in restoration. Attention and visits for prisoners. In Dutch.
+    type: organisatie
+    tags: [gevangenenzorg]
+
+  - titel: GZB
+    url: https://www.gzb.nl/
+    omschrijving: Het Evangelie voor iedereen. Wereldwijde zending om het Evangelie te verspreiden.
+    omschrijving_en: The Gospel for everyone. Worldwide mission spreading the Gospel. In Dutch.
+    type: organisatie
+    tags: [zending]
+
+  - titel: GlobalRize
+    url: https://www.globalrize.nl/
+    omschrijving: Evangelisatie via internet. Bereik de onbereikten met het Evangelie van Jezus Christus.
+    omschrijving_en: Evangelism via the internet, reaching the unreached with the Gospel of Jesus Christ.
+    type: organisatie
+    tags: [zending]
+
+  - titel: Voedselbanken Nederland
+    url: https://voedselbankennederland.nl
+    omschrijving: Help met voedsel, tijd of geld voor mensen die het nodig hebben, vaak ook in je eigen woonplaats.
+    omschrijving_en: Help with food, time or money for people in need, often in your own town. In Dutch.
+    type: organisatie
+    tags: [naastenhulp, vrijwilligerswerk]
+
+  # VOORSTEL Claude – houden of verwijderen?
+  - titel: Open Doors
+    url: https://www.opendoors.nl
+    omschrijving: Steunt christenen die om hun geloof worden vervolgd, wereldwijd.
+    omschrijving_en: Supports Christians persecuted for their faith, worldwide.
+    type: organisatie
+    tags: [vervolgde kerk]
+
+  # VOORSTEL Claude – houden of verwijderen?
+  - titel: Woord en Daad
+    url: https://www.woordendaad.nl
+    omschrijving: Christelijke hulp- en ontwikkelingsorganisatie, actief in Afrika, Azië en Latijns-Amerika.
+    omschrijving_en: Christian relief and development organisation, active in Africa, Asia and Latin America.
+    type: organisatie
+    tags: [naastenhulp]

@@ -1,0 +1,23 @@
+{# Verwacht: lijst, T, optioneel toonPlek #}
+{% from "partials/kaart.njk" import kaart %}
+<div class="lijst" data-lijst>
+  {% if lijst.length %}
+    {% if lijst | heeftPartner %}<p class="melding">{{ T.t.partnerMelding }}</p>{% endif %}
+    {% set lt = lijst | lijstTags %}
+    {% if lt.length > 1 and lijst.length > 3 %}
+    <div class="filter" data-filter hidden>
+      <p class="filter__label" id="filter-{{ page.url | slugify }}">{{ T.t.toonAlleen }}</p>
+      <div class="filter__knoppen" role="group" aria-labelledby="filter-{{ page.url | slugify }}">
+        <button type="button" aria-pressed="true" data-tag="">{{ T.t.alles }}</button>
+        {% for t in lt %}<button type="button" aria-pressed="false" data-tag="{{ t.key }}">{{ t.label }}</button>{% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    <div class="items">
+      {% for item in lijst %}{{ kaart(item, T, toonPlek) }}{% endfor %}
+    </div>
+    <p class="leeg" data-leeg hidden>{{ T.t.geenBijFilter }}</p>
+  {% else %}
+    <p class="leeg">{{ T.t.leegRubriek }} <a href="{{ T.t.urls.over }}#contact">{{ T.t.laatWeten }}</a>.</p>
+  {% endif %}
+</div>
