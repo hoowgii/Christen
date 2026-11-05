@@ -39,7 +39,7 @@ tekst:
     invloed: "Invloed, verwantschap of traditie:"
     website: Website
     meer: Meer op Christen&
-    extern: (externe website)
+    extern: (externe website, opent in nieuw tabblad)
   en:
     titel: Church history
     beschrijving: A simplified main line of church history, from the early church to today’s Dutch denominations.
@@ -58,7 +58,7 @@ tekst:
     invloed: "Influence, kinship or tradition:"
     website: Website
     meer: More on Christen&
-    extern: (external website)
+    extern: (external website, opens in a new tab)
 
 knopen:
   - id: vroege-kerk
