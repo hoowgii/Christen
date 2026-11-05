@@ -61,11 +61,12 @@ export default function (eleventyConfig) {
     const lijnen = K.lijnen.map((l) => {
       const a = vind(l.van), b = vind(l.naar);
       let d;
-      if (l.route === "onder") d = `M${a.cx} ${a.cy + h / 2} V${b.cy} H${b.x}`;
+      if (l.pad) d = "M" + l.pad.map(([x, y]) => `${x} ${y}`).join(" L");
+      else if (l.route === "onder") d = `M${a.cx} ${a.cy + h / 2} V${b.cy} H${b.x}`;
       else if (a.cx === b.cx) d = `M${a.cx} ${a.cy + h / 2} V${b.cy - h / 2}`;
       else if (a.cy === b.cy) d = `M${a.x + w} ${a.cy} H${b.x}`;
       else { const knik = l.knik ?? b.x - 16; d = `M${a.x + w} ${a.cy} H${knik} V${b.cy} H${b.x}`; }
-      return { d, soort: l.soort };
+      return { d, soort: l.soort, label: kies(l, "label") || "", lx: l.lx, ly: l.ly };
     });
     const westers = vind("westerse-kerk");
     const rk = westers ? { d: `M${westers.x + w} ${westers.cy} H${t.breedte - 16}`, tx: (westers.x + w + t.breedte) / 2, ty: westers.cy - 12 } : null;
@@ -73,6 +74,7 @@ export default function (eleventyConfig) {
     knopen.forEach((k) => {
       const binnen = K.lijnen.filter((l) => l.naar === k.id);
       k.direct = binnen.filter((l) => l.soort === "direct").map((l) => vind(l.van));
+      k.aftakking = binnen.filter((l) => l.soort === "aftakking").map((l) => vind(l.van));
       k.invloed = binnen.filter((l) => l.soort === "invloed").map((l) => vind(l.van));
     });
     return { knopen, lijnen, rk, breedte: t.breedte, hoogte: t.hoogte };
