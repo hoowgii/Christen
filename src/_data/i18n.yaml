@@ -33,7 +33,7 @@ nl:
   geenBijFilter: Niets gevonden met deze keuze. Pas het filter aan of kies Alles.
   leegRubriek: Op deze pagina staan geen bronnen.
   bekijkBij: Bekijk bij
-  extern: (externe website)
+  extern: (externe website, opent in nieuw tabblad)
   in: In
   bron: bron
   bronnenMv: bronnen
@@ -98,7 +98,7 @@ en:
   geenBijFilter: Nothing found for this selection. Adjust the filter or choose All.
   leegRubriek: There are no resources on this page.
   bekijkBij: View at
-  extern: (external website)
+  extern: (external website, opens in a new tab)
   in: In
   bron: resource
   bronnenMv: resources
