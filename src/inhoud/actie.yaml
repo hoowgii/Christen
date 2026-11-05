@@ -24,8 +24,16 @@ items:
     omschrijving_en: Not every country allows you to be openly Christian. Richard Wurmbrand experienced this first-hand. His story inspired, among others, SDOK, which stands alongside persecuted Christians. In Dutch.
     type: organisatie
     tags: [vervolgde kerk, sdok]
+    links:
+      - tekst: "Lees zijn verhaal: Tortured for Christ"
+        tekst_en: "Read his story: Tortured for Christ"
+        aanbieder: Amazon
+        url: "https://link.amazon/B0db5M7oq"
+        partner: true
 
+  # Staat niet als losse tegel op & Actie (wel als link bij SDOK), wel in & Winkel
   - titel: Tortured for Christ
+    alleen_winkel: true
     auteur: Richard Wurmbrand
     omschrijving: Op 29 februari 1948 werd Richard Wurmbrand door de geheime politie gearresteerd. Zijn misdaad? Het leiden van christelijke diensten en getuigen van zijn geloof. Zijn verhaal over vervolging en trouw.
     omschrijving_en: On February 29, 1948, Richard Wurmbrand was arrested by the secret police. His crime? Leading Christian worship and witnessing. His story of persecution and faithfulness.
@@ -62,7 +70,6 @@ items:
     type: organisatie
     tags: [naastenhulp, vrijwilligerswerk]
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Open Doors
     url: https://www.opendoors.nl
     omschrijving: Steunt christenen die om hun geloof worden vervolgd, wereldwijd.
@@ -70,7 +77,6 @@ items:
     type: organisatie
     tags: [vervolgde kerk]
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Woord en Daad
     url: https://www.woordendaad.nl
     omschrijving: Christelijke hulp- en ontwikkelingsorganisatie, actief in Afrika, Azië en Latijns-Amerika.

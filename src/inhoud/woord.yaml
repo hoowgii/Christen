@@ -54,7 +54,6 @@ items:
     type: website
     tags: [bijbellezen, voor beginners]
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Gereformeerde Bijbelstichting
     url: https://www.gbs.nl
     omschrijving: Uitgever en verspreider van de Statenvertaling, met bijbels en psalmboeken in vele uitvoeringen.
@@ -69,8 +68,8 @@ items:
     omschrijving: Vertaling die zo dicht mogelijk bij de grondtekst blijft.
     omschrijving_en: A translation that stays as close as possible to the original text. In Dutch.
     sub: bijbel
-    type: boek
-    tags: [bijbels, statenvertaling]
+    type: bijbel
+    tags: [statenvertaling]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B09aAevw4", partner: true }
 
@@ -79,8 +78,7 @@ items:
     omschrijving: De Herziene Statenvertaling, dicht bij de Statenvertaling maar in hedendaags Nederlands.
     omschrijving_en: The Revised States Translation, close to the States Translation but in contemporary Dutch.
     sub: bijbel
-    type: boek
-    tags: [bijbels]
+    type: bijbel
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
 
@@ -89,10 +87,8 @@ items:
     omschrijving: De Herziene Statenvertaling met toelichting en achtergronden om de Bijbel grondig te bestuderen.
     omschrijving_en: The Revised States Translation with notes and background for thorough Bible study. In Dutch.
     sub: bijbel
-    type: boek
-    tags: [bijbels]
+    type: bijbel
     kanalen:
-      # LET OP: zelfde link als HSV Bijbel – juiste link nog invullen
       - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
 
   - titel: HSV-Jongerenbijbel
@@ -100,8 +96,8 @@ items:
     omschrijving: Bijbel met extra uitleg om bijbelgedeelten beter te begrijpen.
     omschrijving_en: A Bible with extra explanation to help you understand Bible passages better. In Dutch.
     sub: bijbel
-    type: boek
-    tags: [bijbels, jongeren, voor beginners]
+    type: bijbel
+    tags: [jongeren, voor beginners]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B07eHuxW4", partner: true }
 
@@ -110,10 +106,44 @@ items:
     omschrijving: Vertaling gericht op begrijpelijk, hedendaags Nederlands.
     omschrijving_en: A translation focused on clear, contemporary Dutch.
     sub: bijbel
-    type: boek
-    tags: [bijbels]
+    type: bijbel
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B0aC1nHrf", partner: true }
+
+  # ---------- Bijbel: apps ----------
+  - titel: Mijn Bijbel
+    url: https://www.bijbelgenootschap.nl/actueel/mijn-bijbelapp/
+    omschrijving: Officiële Bijbelapp van het Nederlands-Vlaams Bijbelgenootschap met onder meer NBV21, NBV, Bijbel in Gewone Taal, Herziene Statenvertaling, Groot Nieuws Bijbel, NBG-vertaling 1951, Statenvertaling en de Friese Bibel. Met leesplannen, zoeken, luisteren, markeren en offline lezen.
+    sub: bijbel
+    type: app
+    talen: [nl]
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, offline, bijbelstudie]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=org.bb.app&hl=nl" }
+      - { tekst: App Store, url: "https://apps.apple.com/nl/app/mijn-bijbel-nieuw/id6670254162" }
+
+  - titel: YouVersion Bijbel App
+    titel_en: YouVersion Bible App
+    url: https://www.youversion.com/bible-app
+    omschrijving: Gratis Bijbelapp met veel Nederlandse en internationale vertalingen, audio, leesplannen, vergelijken van vertalingen en offline downloads voor geselecteerde vertalingen. Op Android is ook een parallelle weergave van twee vertalingen beschikbaar.
+    omschrijving_en: Free international Bible app with a large collection of translations, audio Bibles, reading plans, version comparison and offline access for selected versions.
+    sub: bijbel
+    type: app
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, audio, offline, internationaal]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android&hl=nl" }
+      - { tekst: App Store, url: "https://apps.apple.com/nl/app/bijbel/id282935706" }
+
+  - titel: Bible Gateway
+    url: https://www.biblegateway.com/app/
+    omschrijving_en: International Bible reading and study app with more than 200 translations, audio Bibles, reading plans, notes and side-by-side comparison on supported tablets. The free version may contain advertising; additional study resources require Bible Gateway Plus.
+    sub: bijbel
+    type: app
+    talen: [en]
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, bijbelstudie, internationaal]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=com.csnmedia.android.bg" }
+      - { tekst: App Store, url: "https://apps.apple.com/us/app/bible-gateway/id506512797" }
 
   # ---------- Verkondigd ----------
   - titel: Kerktijden.nl

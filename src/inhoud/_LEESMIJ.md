@@ -5,7 +5,7 @@ Elk bestand in deze map is één rubriek, met al zijn teksten en bronnen.
 ## Velden van een rubriek
 
 - `volgorde`: positie in menu en op de startpagina (1 = eerst)
-- `slug` / `slug_en`: het adres, bijv. christen.nl/woord/ en /en/word/
+- `slug` / `slug_en`: het adres, bijv. christen-en.nl/woord/ en /en/word/
 - `naam`, `kort` (één regel op de tegels), `intro` (eerste alinea, met grote beginletter)
 - `tekst`: langere uitleg onder de intro. Hierin mag je opmaak gebruiken:
   - een lege regel = nieuwe alinea
@@ -18,11 +18,22 @@ Elk bestand in deze map is één rubriek, met al zijn teksten en bronnen.
 ## Velden van een item (bron)
 
 - `titel`, `url`, `omschrijving`, `auteur` (optioneel)
+- `url_en`: ander adres voor de Engelse site (optioneel)
+- `talen: [nl]` of `talen: [en]`: item alleen in die taal tonen (optioneel; zonder dit veld verschijnt het in beide talen). Werkt ook voor een subrubriek.
 - `sub`: in welke subrubriek het item hoort (alleen als de rubriek subrubrieken heeft)
-- `type`: website, video, radio, organisatie, boek, product, app
+- `type`: bijbel, boek, product, app, website, video, radio, organisatie, opleiding, cursus, evenement (op lijsten met meerdere soorten kun je hierop filteren)
 - `tags`: onderwerpen; verbinden items over rubrieken heen
+- `links`: extra verwijzing(en) op de kaart, bijv. een boek bij een organisatie of de app-winkels (Google Play, App Store) bij een app (`tekst`, `tekst_en`, `url`, `aanbieder`, `partner`)
+- `alleen_winkel: true`: item niet als losse tegel op de rubriekpagina, wel in & Winkel, zoeken en onderwerpen
 - `kanalen`: winkellinks. `partner: true` = affiliate-link (dan staat er een vermelding in & Winkel)
 
 Alles met `_en` erachter is de Engelse versie. Ontbreekt die, dan toont de Engelse site de Nederlandse tekst.
-Een item zonder `url` toont "Link volgt".
-Regels met `# VOORSTEL` zijn bronnen die Claude heeft voorgesteld: houden of verwijderen.
+Een item zonder `url` krijgt geen websitelink; vul daarom altijd een `url` in.
+
+## Evenementen
+
+Zet bij terugkerende evenementen geen jaartal in de titel en verwijs naar de vaste hoofdpagina van de organisator, niet naar een pagina van één editie.
+
+## Kerkgeschiedenis
+
+De tekening en tekst op /kerkgeschiedenis/ komen uit `src/_data/kerkgeschiedenis.yaml`. Uitleg van de velden staat bovenin dat bestand.

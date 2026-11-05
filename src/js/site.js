@@ -14,28 +14,42 @@
     });
   }
 
-  /* ---------- Filteren op onderwerp ---------- */
+  /* ---------- Filteren op soort, onderwerp en tekst ---------- */
+  const normaal = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   document.querySelectorAll("[data-lijst]").forEach((blok) => {
     const filter = blok.querySelector("[data-filter]");
     if (!filter) return;
     filter.hidden = false;
-    const knoppen = filter.querySelectorAll("button");
-    const items = blok.querySelectorAll(".item");
+    const items = [...blok.querySelectorAll(".item")];
     const leeg = blok.querySelector("[data-leeg]");
-    knoppen.forEach((k) =>
-      k.addEventListener("click", () => {
-        const tag = k.dataset.tag;
+    const invoer = filter.querySelector("[data-filter-tekst]");
+    const keuze = { type: "", tag: "" };
+    let wacht;
+
+    const pasToe = () => {
+      const termen = normaal(invoer ? invoer.value : "").split(/\s+/).filter(Boolean);
+      let zichtbaar = 0;
+      items.forEach((it) => {
+        const tags = it.dataset.tags ? it.dataset.tags.split("|") : [];
+        const tekst = normaal(it.dataset.zoek + " " + tags.join(" "));
+        const toon = (!keuze.type || it.dataset.type === keuze.type)
+          && (!keuze.tag || tags.includes(keuze.tag))
+          && termen.every((t) => tekst.includes(t));
+        it.hidden = !toon;
+        if (toon) zichtbaar++;
+      });
+      if (leeg) leeg.hidden = zichtbaar > 0;
+    };
+
+    filter.querySelectorAll("[data-groep]").forEach((groep) => {
+      const knoppen = groep.querySelectorAll("button");
+      knoppen.forEach((k) => k.addEventListener("click", () => {
         knoppen.forEach((b) => b.setAttribute("aria-pressed", String(b === k)));
-        let zichtbaar = 0;
-        items.forEach((it) => {
-          const tags = it.dataset.tags ? it.dataset.tags.split("|") : [];
-          const toon = !tag || tags.includes(tag);
-          it.hidden = !toon;
-          if (toon) zichtbaar++;
-        });
-        if (leeg) leeg.hidden = zichtbaar > 0;
-      })
-    );
+        keuze[groep.dataset.groep] = k.dataset.waarde;
+        pasToe();
+      }));
+    });
+    if (invoer) invoer.addEventListener("input", () => { clearTimeout(wacht); wacht = setTimeout(pasToe, 150); });
   });
 
   /* ---------- Zoeken ---------- */
@@ -45,10 +59,10 @@
 
   const lang = document.documentElement.lang === "en" ? "en" : "nl";
   const TEKST = {
-    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website)", linkVolgt: "Link volgt", onderwerpen: "Onderwerpen",
+    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website)", onderwerpen: "Onderwerpen",
           een: "resultaat", meer: "resultaten", voor: "voor", niets: (q) => `Niets gevonden voor “${q}”. Probeer een ander woord, of bekijk alle onderwerpen.`,
           fout: "Zoeken is nu niet beschikbaar. Vernieuw de pagina en probeer het opnieuw." },
-    en: { in: "In", bekijkBij: "View at", extern: " (external website)", linkVolgt: "Link to follow", onderwerpen: "Topics",
+    en: { in: "In", bekijkBij: "View at", extern: " (external website)", onderwerpen: "Topics",
           een: "result", meer: "results", voor: "for", niets: (q) => `Nothing found for “${q}”. Try another word, or browse all topics.`,
           fout: "Search is not available right now. Reload the page and try again." },
   }[lang];
@@ -61,7 +75,7 @@
   const invoer = zoek.querySelector("input");
   const uit = document.querySelector("[data-resultaten]");
   const status = document.querySelector("[data-status]");
-  const norm = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const norm = normaal;
   let data = [];
   let wacht;
 
@@ -92,6 +106,17 @@
       p.append(a);
       art.append(p);
     }
+    if (i.links && i.links.length) {
+      const ul = el("ul", "item__extra");
+      i.links.forEach((k) => {
+        const li = el("li"); const a = el("a", "", k.tekst);
+        a.href = k.url; a.rel = "noopener" + (k.partner ? " sponsored" : "");
+        li.append(a);
+        if (k.aanbieder) li.append(" ", el("span", "item__extra-bron", `(${k.aanbieder})`));
+        li.append(sr(TEKST.extern)); ul.append(li);
+      });
+      art.append(ul);
+    }
     const voet = el("div", "item__voet");
     if (i.kanalen.length) {
       const ul = el("ul", "item__kanalen");
@@ -106,12 +131,11 @@
     } else if (i.url) {
       let domein = i.url;
       try { domein = new URL(i.url).hostname.replace(/^www\./, ""); } catch {}
-      const p = el("p", "item__domein");
+      const p = el("a", "item__domein");
+      p.href = i.url; p.rel = "noopener"; p.tabIndex = -1; p.setAttribute("aria-hidden", "true");
       p.innerHTML = EXTERN_ICOON;
-      p.append(domein, sr(TEKST.extern));
+      p.append(domein);
       voet.append(p);
-    } else {
-      voet.append(el("p", "item__domein", TEKST.linkVolgt));
     }
     if (i.tags.length) {
       const ul = el("ul", "item__tags");

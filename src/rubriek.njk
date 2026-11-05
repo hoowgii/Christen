@@ -22,7 +22,7 @@ eleventyComputed:
   </header>
 
   {% if p.verzamel == "winkel" %}
-    {% set lijst = T.items | teKoop %}{% set toonPlek = true %}
+    {% set lijst = T.items | teKoop %}{% set toonPlek = true %}{% set metTekstfilter = true %}
     {% include "partials/itemlijst.njk" %}
   {% elif p.sub.length %}
     {% set tegels = [] %}

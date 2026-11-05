@@ -19,19 +19,21 @@ nl:
   over: Over Christen&
   redactie: Redactionele uitgangspunten
   bronnen: Bronnenbeleid
-  contact: Contact
   privacy: Privacy
   disclaimer: Disclaimer
   voetTekst: Wegwijs in het christelijk leven. Voor wie net begint, en voor wie al lang onderweg is.
   voetNoot: Christen& wijst de weg naar bronnen, maar vervangt geen kerk. Zoek een Bijbelgetrouwe gemeente bij jou in de buurt.
   toonAlleen: Toon alleen
   alles: Alles
-  geenBijFilter: Er staat hier nog niets bij dit onderwerp. Kies een ander onderwerp of toon alles.
-  leegRubriek: Hier komen binnenkort bronnen te staan. Weet je een goede bron?
-  laatWeten: Laat het ons weten
+  soort: Soort
+  onderwerpLabel: Onderwerp
+  filterZoek: Zoek in deze lijst
+  filterPlaceholder: Typ een titel, auteur of woord
+  typen: { bijbel: Bijbels, boek: Boeken, product: Producten, app: Apps, website: Websites, video: Video, radio: Radio, organisatie: Organisaties, opleiding: Opleidingen, cursus: Cursussen, evenement: Evenementen }
+  geenBijFilter: Niets gevonden met deze keuze. Pas het filter aan of kies Alles.
+  leegRubriek: Op deze pagina staan geen bronnen.
   bekijkBij: Bekijk bij
   extern: (externe website)
-  linkVolgt: Link volgt
   in: In
   bron: bron
   bronnenMv: bronnen
@@ -82,19 +84,21 @@ en:
   over: About Christen&
   redactie: Editorial principles
   bronnen: Source policy
-  contact: Contact
   privacy: Privacy
   disclaimer: Disclaimer
   voetTekst: Finding your way in the Christian life. For those just starting out, and for those who have walked it for years.
   voetNoot: Christen& points to resources, but does not replace a church. Find a Bible-faithful congregation near you.
   toonAlleen: Show only
   alles: All
-  geenBijFilter: Nothing here for this topic yet. Choose another topic or show all.
-  leegRubriek: Resources will appear here soon. Do you know a good one?
-  laatWeten: Let us know
+  soort: Type
+  onderwerpLabel: Topic
+  filterZoek: Search this list
+  filterPlaceholder: Type a title, author or word
+  typen: { bijbel: Bibles, boek: Books, product: Products, app: Apps, website: Websites, video: Video, radio: Radio, organisatie: Organisations, opleiding: Programmes, cursus: Courses, evenement: Events }
+  geenBijFilter: Nothing found for this selection. Adjust the filter or choose All.
+  leegRubriek: There are no resources on this page.
   bekijkBij: View at
   extern: (external website)
-  linkVolgt: Link to follow
   in: In
   bron: resource
   bronnenMv: resources

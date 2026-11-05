@@ -6,20 +6,36 @@ naam: Verdiepen
 naam_en: Going deeper
 kort: Het geloof verantwoorden en de geloofsleer leren kennen.
 kort_en: Giving reasons for the faith and learning its doctrine.
-intro: Op zoek naar verdieping? Hier vind je twee wegen om verder te komen in het geloof, met bronnen die je daarbij helpen.
-intro_en: Looking to go deeper? Here are two ways to grow in the faith, with resources to help you.
+intro: Op zoek naar verdieping? Hier vind je verschillende wegen om verder te komen in het geloof, met bronnen die je daarbij helpen.
+intro_en: Looking to go deeper? Here are several ways to grow in the faith, with resources to help you.
 tekst: |
   ### Apologetiek
   Apologetiek is het verantwoorden van het christelijk geloof: uitleggen waarom christenen geloven wat ze geloven, en ingaan op vragen en kritiek. De Bijbel roept daartoe op: “Zijt altijd bereid tot verantwoording aan een iegelijk, die u rekenschap afvraagt van de hoop, die in u is” (1 Petrus 3:15).
 
   ### Catechismus
   Vragen over het geloof zijn niet nieuw. Daarom zijn er in de kerkgeschiedenis in verschillende landen vragen en antwoorden opgesteld over de kern van het geloof: een catechismus. In Nederland is de Heidelbergse Catechismus (1563) de bekendste. Op [heidelbergse-catechismus.nl](https://www.heidelbergse-catechismus.nl/) vind je de vragen en antwoorden, met een hedendaagse versie en bewijsteksten. In veel gemeenten wordt de catechismus in de middagdienst uitgelegd en bepreekt; zie [Verkondigd](/woord/verkondigd/).
+
+  ### Kerkgeschiedenis
+  Hoe zijn de kerken in Nederland ontstaan? De [vereenvoudigde kerkgeschiedenis](/kerkgeschiedenis/) laat de hoofdlijn zien, van de vroege kerk tot de kerkverbanden van nu.
+
+  ### Studie
+  Wil je verder, bijvoorbeeld met een opleiding of cursus theologie? Kijk bij [Studie en verdieping](/verdiepen/studie-verdieping/).
 tekst_en: |
   ### Apologetics
   Apologetics is giving reasons for the Christian faith: explaining why Christians believe what they believe, and responding to questions and criticism. The Bible calls us to this: “Be ready always to give an answer to every man that asketh you a reason of the hope that is in you” (1 Peter 3:15).
 
   ### Catechism
   Questions about faith are not new. That is why, over the history of the church, questions and answers on the heart of the faith were written in several countries: a catechism. In the Netherlands the best known is the Heidelberg Catechism (1563). On [heidelbergse-catechismus.nl](https://www.heidelbergse-catechismus.nl/) you can find its questions and answers, with a contemporary version and proof texts (in Dutch). In many congregations the catechism is explained and preached in the afternoon service; see [Preached](/en/word/preached/).
+
+  ### Church history
+  How did the churches in the Netherlands come about? The [simplified church history](/en/church-history/) shows the main line, from the early church to today’s denominations.
+
+sub:
+  - slug: studie-verdieping
+    naam: Studie en verdieping
+    kort: Theologie studeren of je toerusten, ook naast werk en gezin.
+    intro: Een compacte selectie van opleidingen, cursussen en studiedagen. Bij elke bron staat om wat voor soort opleiding het gaat.
+    talen: [nl]
 
 items:
   - titel: Christelijke Apologeet (Chris Verhagen)
@@ -36,3 +52,79 @@ items:
     omschrijving_en: The Heidelberg Catechism with a contemporary version and the Bible proof texts. In Dutch.
     type: website
     tags: [catechismus, geloofsleer, voor beginners]
+
+  - titel: ABC van het geloof
+    url: https://abcvanhetgeloof.nl/
+    omschrijving: Uitleg van christelijke kernwoorden voor jongeren vanaf de middelbareschoolleeftijd, ouders, jeugdwerkers en scholen. Bij ieder kernwoord staan onder meer een definitie, video, Bijbelteksten, belijdenisgeschriften, een zevendaags Bijbelrooster, leestips en opdrachten.
+    type: website
+    talen: [nl]
+    tags: [geloofsleer, jongeren, catechese, bijbelstudie, begrippen]
+    links:
+      - { tekst: Over ABC van het geloof, url: "https://abcvanhetgeloof.nl/over-abc" }
+
+  # ---------- Studie en verdieping (alleen NL) ----------
+  # Formeel / academisch
+  - titel: PThU
+    url: https://www.pthu.nl/
+    omschrijving: "Protestantse Theologische Universiteit. Erkende bachelor- en masteropleidingen theologie (wetenschappelijk onderwijs)."
+    sub: studie-verdieping
+    type: opleiding
+    talen: [nl]
+    tags: [theologie, opleiding]
+
+  - titel: TUA
+    url: https://www.tua.nl/
+    omschrijving: "Theologische Universiteit Apeldoorn. Erkende opleidingen theologie (wetenschappelijk onderwijs)."
+    sub: studie-verdieping
+    type: opleiding
+    talen: [nl]
+    tags: [theologie, opleiding]
+
+  - titel: Tilburg School of Catholic Theology
+    url: https://www.tilburguniversity.edu/nl/onderwijs/theologie-bachelor-master
+    omschrijving: "Faculteit van Tilburg University. Erkende bachelor- en masteropleiding theologie, vanuit de katholieke traditie."
+    sub: studie-verdieping
+    type: opleiding
+    talen: [nl]
+    tags: [theologie, opleiding]
+
+  - titel: Hogeschool Viaa – Theologie deeltijd
+    url: https://www.viaa.nl/opleidingen/theologie-deeltijd/
+    omschrijving: "Hbo-bacheloropleiding theologie in deeltijd."
+    sub: studie-verdieping
+    type: opleiding
+    talen: [nl]
+    tags: [theologie, opleiding, deeltijd, naast werk en gezin]
+
+  # Flexibel / toerusting naast werk en gezin
+  - titel: Evangelisch College – Opleiding theologie
+    url: https://www.evangelisch-college.nl/studie/opleiding-theologie/
+    omschrijving: "Particuliere opleiding theologie op hbo-niveau, te volgen naast werk en gezin."
+    sub: studie-verdieping
+    type: opleiding
+    talen: [nl]
+    tags: [theologie, opleiding, naast werk en gezin]
+
+  - titel: Cursus TVG
+    url: https://cursustvg.nl/
+    omschrijving: "Toerustingscursus theologie, te volgen naast werk en gezin."
+    sub: studie-verdieping
+    type: cursus
+    talen: [nl]
+    tags: [theologie, toerusting, naast werk en gezin]
+
+  - titel: CGK Vormingscursus
+    url: https://cgk.nl/organisatie/toerusting/vormingscursus/
+    omschrijving: "Toerustingscursus van de Christelijke Gereformeerde Kerken."
+    sub: studie-verdieping
+    type: cursus
+    talen: [nl]
+    tags: [toerusting, naast werk en gezin]
+
+  - titel: CGO
+    url: https://www.cgo.nu/
+    omschrijving: "Losse studiedagen en modules."
+    sub: studie-verdieping
+    type: cursus
+    talen: [nl]
+    tags: [toerusting, studiedag, naast werk en gezin]

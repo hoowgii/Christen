@@ -47,18 +47,16 @@ items:
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B05fGlTSx", partner: true }
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Institutie
     auteur: Johannes Calvijn
     omschrijving: Calvijns onderwijzing in de christelijke godsdienst, het hoofdwerk van de Reformatie in Genève.
     omschrijving_en: Calvin’s Institutes of the Christian Religion, the major work of the Reformation in Geneva. Dutch edition.
     sub: reformatoren
     type: boek
-    tags: [reformatie, geloofsleer]
+    tags: [reformatie, calvijn, geloofsleer]
     kanalen:
       - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=calvijn+institutie" }
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Verklaring van de Bijbel
     auteur: Matthew Henry
     omschrijving: Een praktische, stichtelijke verklaring van de hele Bijbel, vers voor vers.
@@ -69,7 +67,6 @@ items:
     kanalen:
       - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=matthew+henry+verklaring" }
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Redelijke godsdienst
     auteur: Wilhelmus à Brakel
     omschrijving: Een uitgebreide uiteenzetting van de geloofsleer én van het praktische christelijke leven.

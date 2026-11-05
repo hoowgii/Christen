@@ -20,6 +20,11 @@ tekst: |
 
   ### Luisteren
   Veel psalmen zijn ook gezongen te beluisteren, bijvoorbeeld via [Nederland Zingt](https://www.youtube.com/@NederlandZingt). Krijg je geen genoeg van christelijke muziek, dan is er bijvoorbeeld [Groot Nieuws Radio](https://www.grootnieuwsradio.nl/), en zijn er andere christelijke radiozenders, met een breed aanbod of juist alleen psalmen.
+
+  ### Samen zingen
+  Op veel plaatsen worden terugkerende zangavonden georganiseerd, zoals mannenzang, vrouwenzang en samenzang. Hieronder vind je een aantal organisatoren.
+
+  Rond Advent en Kerst organiseren veel kerken en organisaties extra zangdiensten, adventsconcerten en kerstzangavonden. Raadpleeg de agenda van de organisator of plaatselijke gemeente voor actuele gegevens.
 tekst_en: |
   ### What are the psalms?
   The psalms are the 150 songs of the Book of Psalms in the Bible. Many congregations sing them in a metrical version: a rhymed translation that can be sung to a melody. You can find the Dutch texts on [psalmboek.nl](https://psalmboek.nl/).
@@ -32,6 +37,9 @@ tekst_en: |
 
   ### Listening
   Many psalms can also be heard sung, for example through [Nederland Zingt](https://www.youtube.com/@NederlandZingt). And if you cannot get enough of Christian music, there is for example [Groot Nieuws Radio](https://www.grootnieuwsradio.nl/), and other Christian radio stations, with a wide range or with psalms only.
+
+  ### Singing together
+  Around Advent and Christmas many churches and organisations hold extra carol services, Advent concerts and Christmas singing evenings. Check the calendar of the organiser or local congregation for current details.
 
 items:
   - titel: Psalmboek.nl
@@ -55,8 +63,39 @@ items:
     type: radio
     tags: [muziek, radio]
 
-  - titel: Blijde Klanken
-    omschrijving: Radiostation voor wie zich meer wil beperken tot psalmen.
-    omschrijving_en: Radio station for those who prefer to listen mainly to psalms.
-    type: radio
-    tags: [psalmen, radio]
+
+  # ---------- Zangavonden (terugkerend; data staan bij de organisator) ----------
+  - titel: Mannenzang Katwijk
+    url: https://mannenzangkatwijk.nl/
+    omschrijving: Terugkerende zangavonden voor mannen in Katwijk. Actuele data staan op de website.
+    type: evenement
+    talen: [nl]
+    tags: [samenzang, zangavond, terugkerend]
+
+  - titel: Mannenzang Elburg
+    url: https://mannenzangelburg.nl/
+    omschrijving: Terugkerende zangavonden voor mannen in Elburg. Actuele data staan op de website.
+    type: evenement
+    talen: [nl]
+    tags: [samenzang, zangavond, terugkerend]
+
+  - titel: Vrouwenzang Rijssen
+    url: https://www.vrouwenzangrijssen.nl/
+    omschrijving: Terugkerende zangavonden voor vrouwen in Rijssen. Actuele data staan op de website.
+    type: evenement
+    talen: [nl]
+    tags: [samenzang, zangavond, terugkerend]
+
+  - titel: Samenzanguur Ede
+    url: https://www.samenzanguur.nl/
+    omschrijving: Terugkerend uur van samenzang in Ede. Actuele data staan op de website.
+    type: evenement
+    talen: [nl]
+    tags: [samenzang, zangavond, terugkerend]
+
+  - titel: Nederland Zingt – evenementen
+    url: https://nederlandzingt.eo.nl/evenementen
+    omschrijving: Agenda met zang- en meezingavonden van Nederland Zingt (EO).
+    type: evenement
+    talen: [nl]
+    tags: [samenzang, zangavond]

@@ -17,7 +17,6 @@ items:
     type: website
     tags: [nieuws]
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: Nederlands Dagblad
     url: https://www.nd.nl
     omschrijving: Christelijk dagblad met nieuws, opinie en achtergronden.
@@ -25,7 +24,6 @@ items:
     type: website
     tags: [nieuws]
 
-  # VOORSTEL Claude – houden of verwijderen?
   - titel: CIP
     url: https://cip.nl
     omschrijving: Christelijk nieuwsplatform met nieuws uit kerk en samenleving.
