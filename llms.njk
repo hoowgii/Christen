@@ -1,0 +1,37 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- set N = inhoud.talen.nl -%}{%- set E = inhoud.talen.en -%}
+# Christen&
+
+> {{ N.t.beschrijving }} Christen& is een Nederlandstalige, reformatorisch georiënteerde wegwijzer naar betrouwbare christelijke bronnen, met een Engelse versie. / {{ E.t.beschrijving }}
+
+Christen& verwijst naar bronnen en vervangt geen kerk of pastorale zorg. Bezoekers worden aangemoedigd een Bijbelgetrouwe plaatselijke gemeente te zoeken en het Woord zelf te bestuderen.
+
+## Rubrieken (Nederlands)
+{% for r in N.rubrieken %}
+- [{{ r.naam }}]({{ site.url }}{{ r.url }}): {{ r.kort }}
+{%- for s in r.sub %}
+  - [{{ s.naam }}]({{ site.url }}{{ s.url }}): {{ s.kort }}
+{%- endfor %}
+{%- endfor %}
+
+## Sections (English)
+{% for r in E.rubrieken %}
+- [{{ r.naam }}]({{ site.url }}{{ r.url }}): {{ r.kort }}
+{%- endfor %}
+
+## Bronnen
+{% for i in N.items %}
+- {% if i.url %}[{{ i.titel }}]({{ i.url }}){% else %}{{ i.titel }}{% endif %}{% if i.auteur %} ({{ i.auteur }}){% endif %}: {{ i.omschrijving }}
+{%- endfor %}
+
+## Overig
+
+- [Begin hier]({{ site.url }}/begin-hier/): eerste stappen voor wie net begint
+- [Kerkgeschiedenis]({{ site.url }}/kerkgeschiedenis/): vereenvoudigde hoofdlijn van de Nederlandse kerkgeschiedenis
+- [Start here]({{ site.url }}/en/start-here/): first steps for beginners
+- [Over Christen&]({{ site.url }}/over/)
+- [Disclaimer]({{ site.url }}/disclaimer/)
+- [Sitemap]({{ site.url }}/sitemap.xml)

@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: inhoud.paginaRubrieken
+  size: 1
+  alias: p
+  addAllPagesToCollections: true
+permalink: "{{ p.url }}"
+eleventyComputed:
+  lang: "{{ p.lang }}"
+  title: "{{ p.naam }}"
+  description: "{{ p.kort }}"
+---
+{% set T = inhoud.talen[lang] %}
+{% from "partials/kruimel.njk" import kruimel %}
+<div class="wrap pagina">
+  {{ kruimel([{ "naam": site.naam, "url": T.pre + "/" }, { "naam": "& " + p.naam, "url": p.url }], T, site) }}
+  <header class="paginakop">
+    <h1 class="rubriektitel"><span class="rubriektitel__pre">Christen</span> <span class="en">&amp;</span> {{ p.naam }}</h1>
+    <p class="intro intro--initiaal">{{ p.intro }}</p>
+    {% if p.tekst %}<div class="rubriektekst">{{ p.tekst | md | safe }}</div>{% endif %}
+  </header>
+
+  {% if p.verzamel == "winkel" %}
+    {% set lijst = T.items | teKoop %}{% set toonPlek = true %}{% set metTekstfilter = true %}
+    {% include "partials/itemlijst.njk" %}
+  {% elif p.sub.length %}
+    {% set tegels = [] %}
+    {% for s in p.sub %}{% set _ = tegels.push({ "url": s.url, "naam": s.naam, "kort": s.kort, "aantal": (T.items | itemsIn(p.key, s.key)).length }) %}{% endfor %}
+    {% set metEn = false %}
+    {% include "partials/tegels.njk" %}
+    {% set losse = T.items | itemsIn(p.key, null) %}
+    {% if losse.length %}
+      <h2 class="sectiekop">{{ T.t.algemeen }}</h2>
+      {% set lijst = losse %}{% include "partials/itemlijst.njk" %}
+    {% endif %}
+  {% else %}
+    {% set lijst = T.items | itemsIn(p.key) %}
+    {% include "partials/itemlijst.njk" %}
+  {% endif %}
+</div>

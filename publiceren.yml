@@ -26,7 +26,7 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
       - run: npm ci
-      # base_path is "/Christen" op github.io en leeg zodra christen.nl gekoppeld is
+      # base_path is "/Christen" op github.io en leeg zodra christen-en.nl gekoppeld is
       - run: npx @11ty/eleventy --pathprefix="${{ steps.pages.outputs.base_path }}/"
       - uses: actions/upload-pages-artifact@v3
         with:

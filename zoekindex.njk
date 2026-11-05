@@ -1,0 +1,9 @@
+---
+pagination:
+  data: taalcodes
+  size: 1
+  alias: taal
+permalink: "{{ inhoud.talen[taal].pre }}/zoekindex.json"
+eleventyExcludeFromCollections: true
+---
+{{ inhoud.talen[taal].items | zoekindex | safe }}

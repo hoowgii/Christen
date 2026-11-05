@@ -1,0 +1,179 @@
+# & Woord – zie _LEESMIJ.md voor uitleg van de velden
+volgorde: 1
+slug: woord
+slug_en: word
+naam: Woord
+naam_en: Word
+kort: De Bijbel lezen en het Woord horen verkondigen.
+kort_en: Reading the Bible and hearing the Word preached.
+intro: Gods Woord staat in het midden. Hier vind je plaatsen om de Bijbel te lezen, met uitleg erbij, en plaatsen waar het Woord wordt verkondigd.
+intro_en: God’s Word is central. Here you will find places to read the Bible, with explanation alongside, and places where the Word is preached.
+
+sub:
+  - slug: bijbel
+    slug_en: bible
+    naam: Bijbel
+    naam_en: Bible
+    kort: Online bijbellezen, met uitleg en kanttekeningen.
+    kort_en: Read the Bible online, with explanation and notes.
+    intro: Begin bij de bron. Lees de Bijbel online met uitleg erbij, of kies een bijbeluitgave om thuis zelf te bestuderen.
+    intro_en: Start at the source. Read the Bible online with explanation, or choose a Bible edition to study at home.
+  - slug: verkondigd
+    slug_en: preached
+    naam: Verkondigd
+    naam_en: Preached
+    kort: Kerkdiensten, preken en een kerk bij jou in de buurt.
+    kort_en: Church services, sermons and a church near you.
+    intro: Het Woord wordt verkondigd in de gemeente. Zoek een kerk bij jou in de buurt, of luister online naar preken.
+    intro_en: The Word is preached in the congregation. Find a church near you, or listen to sermons online.
+    tekst: |
+      Op [Kerktijden.nl](https://www.kerktijden.nl/) zie je welke gemeenten in jouw woonplaats actief zijn en waar een bepaalde voorganger preekt.
+
+      Veel gemeenten zenden hun diensten ook direct uit, via YouTube, [Kerkdienstgemist.nl](https://kerkdienstgemist.nl/) of [Kerkomroep.nl](https://kerkomroep.nl/). Het beste is om zelf een plaatselijke gemeente te bezoeken. Online preken kunnen een eerste stap zijn om door Gods Woord geraakt te worden, of een aanvulling als je zelf niet naar de kerk kunt.
+    tekst_en: |
+      On [Kerktijden.nl](https://www.kerktijden.nl/) you can see which congregations are active in your town and where a particular minister is preaching.
+
+      Many congregations also broadcast their services live, via YouTube, [Kerkdienstgemist.nl](https://kerkdienstgemist.nl/) or [Kerkomroep.nl](https://kerkomroep.nl/). It is best to visit a local congregation yourself. Online sermons can be a first step towards being touched by God’s Word, or a supplement when you cannot go to church yourself.
+
+items:
+  # ---------- Bijbel: online lezen ----------
+  - titel: Statenvertaling met kanttekeningen
+    titel_en: States Translation with marginal notes
+    url: https://statenvertaling.nl/
+    omschrijving: De Statenvertaling online, met de oorspronkelijke kanttekeningen die moeilijke woorden en passages uitleggen.
+    omschrijving_en: The Dutch States Translation (1637) online, with its original marginal notes explaining difficult words and passages. In Dutch.
+    sub: bijbel
+    type: website
+    tags: [bijbellezen, statenvertaling]
+
+  - titel: BMU online
+    url: https://bijbel.bmuonline.nl/
+    omschrijving: De Bijbel online lezen met BMU-uitleg en uitleg van moeilijke woorden. Daarnaast vind je de bijbelverklaringen van Matthew Henry en Johannes Calvijn en verdere achtergrondinformatie.
+    omschrijving_en: Read the Bible online with BMU commentary and explanation of difficult words, plus the commentaries of Matthew Henry and John Calvin and further background. In Dutch.
+    sub: bijbel
+    type: website
+    tags: [bijbellezen, voor beginners]
+
+  - titel: Gereformeerde Bijbelstichting
+    url: https://www.gbs.nl
+    omschrijving: Uitgever en verspreider van de Statenvertaling, met bijbels en psalmboeken in vele uitvoeringen.
+    omschrijving_en: Publisher and distributor of the States Translation, with Bibles and psalters in many editions.
+    sub: bijbel
+    type: organisatie
+    tags: [bijbellezen, statenvertaling, psalmen]
+
+  # ---------- Bijbel: uitgaven (verschijnen ook in & Winkel) ----------
+  - titel: Statenvertaling Bijbel
+    titel_en: States Translation Bible
+    omschrijving: Vertaling die zo dicht mogelijk bij de grondtekst blijft.
+    omschrijving_en: A translation that stays as close as possible to the original text. In Dutch.
+    sub: bijbel
+    type: bijbel
+    tags: [statenvertaling]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B09aAevw4", partner: true }
+
+  - titel: HSV Bijbel
+    titel_en: HSV Bible
+    omschrijving: De Herziene Statenvertaling, dicht bij de Statenvertaling maar in hedendaags Nederlands.
+    omschrijving_en: The Revised States Translation, close to the States Translation but in contemporary Dutch.
+    sub: bijbel
+    type: bijbel
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
+
+  - titel: HSV-Studiebijbel
+    titel_en: HSV Study Bible
+    omschrijving: De Herziene Statenvertaling met toelichting en achtergronden om de Bijbel grondig te bestuderen.
+    omschrijving_en: The Revised States Translation with notes and background for thorough Bible study. In Dutch.
+    sub: bijbel
+    type: bijbel
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
+
+  - titel: HSV-Jongerenbijbel
+    titel_en: HSV Youth Bible
+    omschrijving: Bijbel met extra uitleg om bijbelgedeelten beter te begrijpen.
+    omschrijving_en: A Bible with extra explanation to help you understand Bible passages better. In Dutch.
+    sub: bijbel
+    type: bijbel
+    tags: [jongeren, voor beginners]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B07eHuxW4", partner: true }
+
+  - titel: NBV21 Bijbel
+    titel_en: NBV21 Bible
+    omschrijving: Vertaling gericht op begrijpelijk, hedendaags Nederlands.
+    omschrijving_en: A translation focused on clear, contemporary Dutch.
+    sub: bijbel
+    type: bijbel
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0aC1nHrf", partner: true }
+
+  # ---------- Bijbel: apps ----------
+  - titel: Mijn Bijbel
+    url: https://www.bijbelgenootschap.nl/actueel/mijn-bijbelapp/
+    omschrijving: Officiële Bijbelapp van het Nederlands-Vlaams Bijbelgenootschap met onder meer NBV21, NBV, Bijbel in Gewone Taal, Herziene Statenvertaling, Groot Nieuws Bijbel, NBG-vertaling 1951, Statenvertaling en de Friese Bibel. Met leesplannen, zoeken, luisteren, markeren en offline lezen.
+    sub: bijbel
+    type: app
+    talen: [nl]
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, offline, bijbelstudie]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=org.bb.app&hl=nl" }
+      - { tekst: App Store, url: "https://apps.apple.com/nl/app/mijn-bijbel-nieuw/id6670254162" }
+
+  - titel: YouVersion Bijbel App
+    titel_en: YouVersion Bible App
+    url: https://www.youversion.com/bible-app
+    omschrijving: Gratis Bijbelapp met veel Nederlandse en internationale vertalingen, audio, leesplannen, vergelijken van vertalingen en offline downloads voor geselecteerde vertalingen. Op Android is ook een parallelle weergave van twee vertalingen beschikbaar.
+    omschrijving_en: Free international Bible app with a large collection of translations, audio Bibles, reading plans, version comparison and offline access for selected versions.
+    sub: bijbel
+    type: app
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, audio, offline, internationaal]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android&hl=nl" }
+      - { tekst: App Store, url: "https://apps.apple.com/nl/app/bijbel/id282935706" }
+
+  - titel: Bible Gateway
+    url: https://www.biblegateway.com/app/
+    omschrijving_en: International Bible reading and study app with more than 200 translations, audio Bibles, reading plans, notes and side-by-side comparison on supported tablets. The free version may contain advertising; additional study resources require Bible Gateway Plus.
+    sub: bijbel
+    type: app
+    talen: [en]
+    tags: [bijbellezen, app, bijbelvertaling, leesplan, bijbelstudie, internationaal]
+    links:
+      - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=com.csnmedia.android.bg" }
+      - { tekst: App Store, url: "https://apps.apple.com/us/app/bible-gateway/id506512797" }
+
+  # ---------- Verkondigd ----------
+  - titel: Kerktijden.nl
+    url: https://www.kerktijden.nl
+    omschrijving: Informatie over kerkdiensten, kerkelijke gemeenten en voorgangers. Zoek welke gemeenten in jouw woonplaats actief zijn, of waar een bepaalde voorganger preekt.
+    omschrijving_en: Information on church services, congregations and ministers. Find which congregations are active in your town, or where a particular minister is preaching. In Dutch.
+    sub: verkondigd
+    type: website
+    tags: [kerk zoeken, voor beginners]
+
+  - titel: Evangelie Herauten
+    url: https://www.youtube.com/@evangelieherauten
+    omschrijving: YouTube-kanaal en online startpunt om preken van verschillende predikanten en kerkgenootschappen te volgen.
+    omschrijving_en: YouTube channel and online starting point for sermons by various ministers and denominations. In Dutch.
+    sub: verkondigd
+    type: video
+    tags: [preken]
+
+  - titel: Kerkdienstgemist.nl
+    url: https://kerkdienstgemist.nl/
+    omschrijving: Kerkdiensten van ruim tweeduizend aangesloten kerken live meeluisteren of -kijken, of later terugluisteren.
+    omschrijving_en: Listen to or watch services of over two thousand affiliated churches live, or listen back later. In Dutch.
+    sub: verkondigd
+    type: website
+    tags: [preken, kerkdiensten]
+
+  - titel: Kerkomroep.nl
+    url: https://kerkomroep.nl/
+    omschrijving: Kerkdiensten van veel gemeenten live of later beluisteren en bekijken.
+    omschrijving_en: Listen to and watch services of many congregations, live or later. In Dutch.
+    sub: verkondigd
+    type: website
+    tags: [preken, kerkdiensten]

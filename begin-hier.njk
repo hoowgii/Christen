@@ -1,0 +1,28 @@
+---
+layout: layouts/tekst.njk
+title: Begin hier
+permalink: /begin-hier/
+description: Net begonnen met geloven, of weer zoekende? Hier vind je een rustige eerste weg.
+alts: { nl: "/begin-hier/", en: "/en/start-here/" }
+---
+{% set T = inhoud.talen[lang] %}
+<p class="intro intro--initiaal">Christen zijn begint niet bij wat wij doen, maar bij God die roept. Het is een leven van dagelijkse bekering: steeds weer afkeren van de zonde en terugkeren tot Hem. Dat leer je niet in één keer. Deze pagina helpt je op weg.</p>
+
+<h2 id="bijbel">Begin met de Bijbel</h2>
+<p>God spreekt door Zijn Woord. Lees elke dag een stukje, liefst op een vast moment. Een goed begin is het evangelie naar Johannes. Lees langzaam en vraag God om het te mogen begrijpen.</p>
+<p><a href="/woord/bijbel/">Bijbels en bijbelsites</a></p>
+
+<h2 id="kerk">Zoek een kerk</h2>
+<p>Geloven doe je niet alleen. Zoek een Bijbelgetrouwe gemeente bij jou in de buurt, waar Gods Woord zuiver wordt verkondigd. Daar ontmoet je anderen die dezelfde weg gaan. Durf gewoon binnen te lopen.</p>
+<p><a href="/woord/verkondigd/">Kerkdiensten en een kerk in de buurt</a></p>
+
+<h2 id="bidden">Leer bidden</h2>
+<p>Bidden is spreken met God. Je hoeft er geen mooie woorden voor te hebben. De Heere Jezus leerde Zijn discipelen het Onze Vader (Mattheüs 6:9–13); dat gebed is een goed voorbeeld om mee te beginnen.</p>
+
+<h2 id="vragen">Stel je vragen</h2>
+<p>Twijfels en vragen horen bij het geloof. Neem ze mee naar je predikant, een ouderling of iemand die je vertrouwt. Je kunt je vraag ook online stellen.</p>
+<p><a href="/verdiepen/">Antwoorden op geloofsvragen</a></p>
+
+<h2>Bronnen voor wie net begint</h2>
+{% set lijst = T.items | metTag("voor beginners") %}{% set toonPlek = true %}
+{% include "partials/itemlijst.njk" %}

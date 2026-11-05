@@ -1,0 +1,272 @@
+# Vereenvoudigde kerkgeschiedenis – data voor /kerkgeschiedenis/ en /en/church-history/
+#
+# knopen:  kolom (0 = links) en rij (0 = boven) bepalen de plek in de tekening op grote schermen.
+#          'label' en 'sub' staan in het blokje; 'naam' en 'omschrijving' in de tekstlijst eronder.
+#          'url' = externe website (bestaand kerkverband), 'link' = interne pagina op Christen&.
+#          Zonder url of link verwijst het blokje naar de uitleg in de tekstlijst.
+# lijnen:  soort 'direct' = doorgetrokken lijn (directe institutionele lijn of samenvoeging),
+#          soort 'invloed' = stippellijn (invloed of verwantschap).
+#          Optioneel: 'knik' = x-positie van de verticale knik, 'route: onder' = via de onderkant.
+
+tekening:
+  kolomBreedte: 160
+  rijHoogte: 100
+  marge: 80
+  knoopBreedte: 124
+  knoopHoogte: 58
+  breedte: 1290
+  hoogte: 620
+
+tekst:
+  nl:
+    titel: Kerkgeschiedenis
+    beschrijving: Een vereenvoudigde hoofdlijn van de kerkgeschiedenis, van de vroege kerk tot de Nederlandse kerkverbanden van nu.
+    intro: Hoe zijn de kerken in Nederland ontstaan? Deze pagina laat de hoofdlijn zien, van de vroege kerk via de Reformatie tot de protestantse kerkverbanden van nu.
+    disclaimer: Deze visual toont een vereenvoudigde hoofdlijn. Zij is niet uitputtend en spreekt geen theologisch waardeoordeel uit.
+    legendaTitel: Zo lees je de tekening
+    legendaDirect: "Doorgetrokken lijn: directe institutionele lijn of samenvoeging"
+    legendaInvloed: "Stippellijn: invloed of verwantschap"
+    legendaExtern: "Blokje met ↗: bestaand kerkverband, linkt naar de eigen website"
+    tekeningLabel: Tekening van de vereenvoudigde kerkgeschiedenis
+    rkDoorloop: De rooms-katholieke traditie loopt door tot vandaag
+    lijstTitel: De hoofdlijn in tekst
+    direct: "Directe lijn vanuit:"
+    invloed: "Invloed of verwantschap:"
+    website: Website
+    meer: Meer op Christen&
+    extern: (externe website)
+  en:
+    titel: Church history
+    beschrijving: A simplified main line of church history, from the early church to today’s Dutch denominations.
+    intro: How did the churches in the Netherlands come about? This page shows the main line, from the early church through the Reformation to today’s Protestant denominations.
+    disclaimer: This visual shows a simplified main line. It is not exhaustive and makes no theological value judgement.
+    legendaTitel: How to read the diagram
+    legendaDirect: "Solid line: direct institutional line or merger"
+    legendaInvloed: "Dotted line: influence or kinship"
+    legendaExtern: "Box with ↗: existing denomination, links to its own website"
+    tekeningLabel: Diagram of the simplified church history
+    rkDoorloop: The Roman Catholic tradition continues to this day
+    lijstTitel: The main line as text
+    direct: "Direct line from:"
+    invloed: "Influence or kinship:"
+    website: Website
+    meer: More on Christen&
+    extern: (external website)
+
+knopen:
+  - id: vroege-kerk
+    kolom: 0
+    rij: 0
+    label: Vroege kerk
+    label_en: Early church
+    sub: eerste eeuwen
+    sub_en: first centuries
+    naam: Vroege kerk
+    naam_en: Early church
+    omschrijving: De christelijke kerk in de eerste eeuwen na Christus.
+    omschrijving_en: The Christian church in the first centuries after Christ.
+
+  - id: westerse-kerk
+    kolom: 1
+    rij: 0
+    label: Westerse kerk
+    label_en: Western church
+    sub: rooms-katholiek
+    sub_en: Roman Catholic
+    naam: Westerse kerk / rooms-katholieke traditie
+    naam_en: Western church / Roman Catholic tradition
+    omschrijving: De kerk in West-Europa onder leiding van de bisschop van Rome. Deze rooms-katholieke traditie loopt tot vandaag door.
+    omschrijving_en: The church in Western Europe under the leadership of the bishop of Rome. This Roman Catholic tradition continues to this day.
+
+  - id: reformatie
+    kolom: 1
+    rij: 1
+    label: Reformatie
+    label_en: Reformation
+    sub: 16e eeuw
+    sub_en: 16th century
+    naam: Reformatie
+    naam_en: Reformation
+    jaar: 16e eeuw
+    jaar_en: 16th century
+    omschrijving: Hervormingsbeweging binnen de westerse kerk in de zestiende eeuw, waaruit de protestantse kerken zijn voortgekomen.
+    omschrijving_en: Reform movement within the Western church in the sixteenth century, from which the Protestant churches emerged.
+    link: /onderwerp/reformatie/
+    link_en: /en/topic/reformation/
+
+  - id: luther
+    kolom: 2
+    rij: 1
+    label: Luther
+    label_en: Luther
+    sub: "1517"
+    naam: Maarten Luther en de lutherse traditie
+    naam_en: Martin Luther and the Lutheran tradition
+    jaar: "1517"
+    omschrijving: Maarten Luther publiceerde in 1517 zijn 95 stellingen. Uit zijn werk ontstond de lutherse traditie. In Nederland ging de Evangelisch-Lutherse Kerk in 2004 op in de Protestantse Kerk in Nederland.
+    omschrijving_en: Martin Luther published his 95 theses in 1517. His work gave rise to the Lutheran tradition. In the Netherlands, the Evangelical Lutheran Church became part of the Protestant Church in the Netherlands in 2004.
+    link: /lezen/reformatoren/
+    link_en: /en/reading/reformers/
+
+  - id: calvijn
+    kolom: 2
+    rij: 2
+    label: Calvijn
+    label_en: Calvin
+    sub: vanaf 1536
+    sub_en: from 1536
+    naam: Johannes Calvijn en de gereformeerde traditie
+    naam_en: John Calvin and the Reformed tradition
+    jaar: vanaf 1536
+    jaar_en: from 1536
+    omschrijving: Johannes Calvijn publiceerde in 1536 de eerste uitgave van zijn Institutie. Hij is een van de grondleggers van de gereformeerde traditie.
+    omschrijving_en: John Calvin published the first edition of his Institutes in 1536. He is one of the founders of the Reformed tradition.
+    link: /onderwerp/calvijn/
+    link_en: /en/topic/calvin/
+
+  - id: ger-lijn
+    kolom: 3
+    rij: 2
+    label: Ger./Herv. lijn
+    label_en: Reformed line
+    sub: in Nederland
+    sub_en: in the Netherlands
+    naam: Gereformeerde/hervormde lijn in Nederland
+    naam_en: Reformed line in the Netherlands
+    omschrijving: In Nederland kreeg de gereformeerde traditie vorm in de gereformeerde kerk, later de hervormde kerk genoemd.
+    omschrijving_en: In the Netherlands the Reformed tradition took shape in the Reformed church, later known as the Hervormde (Dutch Reformed) church.
+
+  - id: nhk
+    kolom: 4
+    rij: 2
+    label: Ned. Herv. Kerk
+    label_en: Dutch Ref. Church
+    sub: "1816"
+    naam: Nederlandse Hervormde Kerk
+    naam_en: Dutch Reformed Church (Nederlandse Hervormde Kerk)
+    jaar: "1816"
+    omschrijving: In 1816 werd de kerk opnieuw georganiseerd als de Nederlandse Hervormde Kerk.
+    omschrijving_en: In 1816 the church was reorganised as the Nederlandse Hervormde Kerk (Dutch Reformed Church).
+
+  - id: afscheiding
+    kolom: 4
+    rij: 3
+    label: Afscheiding
+    label_en: Secession
+    sub: "1834"
+    naam: Afscheiding
+    naam_en: Secession (Afscheiding)
+    jaar: "1834"
+    omschrijving: In 1834 scheidden gemeenten en leden zich af van de Nederlandse Hervormde Kerk.
+    omschrijving_en: In 1834 congregations and members seceded from the Dutch Reformed Church.
+
+  - id: cgk-1869
+    kolom: 5
+    rij: 3
+    label: CGK
+    label_en: CGK
+    sub: "1869"
+    naam: Christelijke Gereformeerde Kerk
+    naam_en: Christian Reformed Church (Christelijke Gereformeerde Kerk)
+    jaar: "1869"
+    omschrijving: In 1869 vormde het grootste deel van de afgescheiden gemeenten samen de Christelijke Gereformeerde Kerk.
+    omschrijving_en: In 1869 most of the seceded congregations together formed the Christelijke Gereformeerde Kerk.
+
+  - id: doleantie
+    kolom: 5
+    rij: 4
+    label: Doleantie
+    label_en: Doleantie
+    sub: "1886"
+    naam: Doleantie
+    naam_en: Doleantie
+    jaar: "1886"
+    omschrijving: In 1886 ging een tweede groep gemeenten en leden uit de Nederlandse Hervormde Kerk. Zij noemden zich de dolerende kerken.
+    omschrijving_en: In 1886 a second group of congregations and members left the Dutch Reformed Church. They called themselves the ‘dolerende’ (grieving) churches.
+
+  - id: gkn
+    kolom: 6
+    rij: 4
+    label: GKN
+    label_en: GKN
+    sub: "1892"
+    naam: Gereformeerde Kerken in Nederland
+    naam_en: Reformed Churches in the Netherlands (Gereformeerde Kerken in Nederland)
+    jaar: "1892"
+    omschrijving: In 1892 verenigden het grootste deel van de Christelijke Gereformeerde Kerk en de dolerende kerken zich tot de Gereformeerde Kerken in Nederland.
+    omschrijving_en: In 1892 most of the Christelijke Gereformeerde Kerk and the dolerende churches united as the Gereformeerde Kerken in Nederland.
+
+  - id: cgk
+    kolom: 6
+    rij: 3
+    label: CGK
+    label_en: CGK
+    sub: vanaf 1892
+    sub_en: from 1892
+    naam: Christelijke Gereformeerde Kerken
+    naam_en: Christian Reformed Churches (Christelijke Gereformeerde Kerken)
+    jaar: vanaf 1892
+    jaar_en: from 1892
+    omschrijving: Een deel van de Christelijke Gereformeerde Kerk ging in 1892 niet mee in de vereniging en zette de kerk zelfstandig voort.
+    omschrijving_en: Part of the Christelijke Gereformeerde Kerk did not join the 1892 union and continued the church independently.
+    url: https://cgk.nl/
+
+  - id: gg
+    kolom: 6
+    rij: 5
+    label: Ger. Gemeenten
+    label_en: Ger. Gemeenten
+    sub: "1907"
+    naam: Gereformeerde Gemeenten
+    naam_en: Reformed Congregations (Gereformeerde Gemeenten)
+    jaar: "1907"
+    omschrijving: In 1907 ontstonden de Gereformeerde Gemeenten uit Ledeboeriaanse gemeenten en zelfstandig gebleven kruisgemeenten.
+    omschrijving_en: In 1907 the Gereformeerde Gemeenten were formed from Ledeboerian congregations and independent ‘kruisgemeenten’ (congregations under the cross).
+    url: https://www.gergeminfo.nl/
+
+  - id: pkn
+    kolom: 7
+    rij: 1
+    label: PKN
+    label_en: PKN
+    sub: "2004"
+    naam: Protestantse Kerk in Nederland
+    naam_en: Protestant Church in the Netherlands (Protestantse Kerk in Nederland)
+    jaar: "2004"
+    omschrijving: In 2004 vormden het grootste deel van de Nederlandse Hervormde Kerk, de Gereformeerde Kerken in Nederland en de Evangelisch-Lutherse Kerk samen de Protestantse Kerk in Nederland.
+    omschrijving_en: In 2004 most of the Dutch Reformed Church, the Gereformeerde Kerken in Nederland and the Evangelical Lutheran Church together formed the Protestant Church in the Netherlands.
+    url: https://protestantsekerk.nl/
+
+  - id: hhk
+    kolom: 7
+    rij: 2
+    label: HHK
+    label_en: HHK
+    sub: "2004"
+    naam: Hersteld Hervormde Kerk
+    naam_en: Restored Reformed Church (Hersteld Hervormde Kerk)
+    jaar: "2004"
+    omschrijving: Hervormde gemeenten en leden die in 2004 niet meegingen in de vorming van de Protestantse Kerk in Nederland, gingen verder als Hersteld Hervormde Kerk.
+    omschrijving_en: Hervormde congregations and members who did not join the formation of the Protestant Church in the Netherlands in 2004 continued as the Hersteld Hervormde Kerk.
+    url: https://www.hersteldhervormdekerk.nl/
+
+lijnen:
+  - { van: vroege-kerk, naar: westerse-kerk, soort: direct }
+  - { van: westerse-kerk, naar: reformatie, soort: direct }
+  - { van: reformatie, naar: luther, soort: direct }
+  - { van: reformatie, naar: calvijn, soort: direct }
+  - { van: luther, naar: calvijn, soort: invloed }
+  - { van: calvijn, naar: ger-lijn, soort: direct }
+  - { van: ger-lijn, naar: nhk, soort: direct }
+  - { van: nhk, naar: afscheiding, soort: direct }
+  - { van: afscheiding, naar: cgk-1869, soort: direct }
+  - { van: nhk, naar: doleantie, soort: direct, knik: 806 }
+  - { van: cgk-1869, naar: gkn, soort: direct }
+  - { van: doleantie, naar: gkn, soort: direct }
+  - { van: cgk-1869, naar: cgk, soort: direct }
+  - { van: nhk, naar: gg, soort: invloed, knik: 794 }
+  - { van: afscheiding, naar: gg, soort: invloed, route: onder }
+  - { van: luther, naar: pkn, soort: direct }
+  - { van: nhk, naar: pkn, soort: direct, knik: 1122 }
+  - { van: gkn, naar: pkn, soort: direct, knik: 1122 }
+  - { van: nhk, naar: hhk, soort: direct }

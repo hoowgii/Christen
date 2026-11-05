@@ -1,0 +1,46 @@
+{# Verwacht: lijst, T, optioneel toonPlek en metTekstfilter #}
+{% from "partials/kaart.njk" import kaart %}
+<div class="lijst" data-lijst>
+  {% if lijst.length %}
+    {% if lijst | heeftPartner %}<p class="melding">{{ T.t.partnerMelding }}</p>{% endif %}
+    {% set lt = lijst | lijstTags %}
+    {% set ltypen = lijst | lijstTypen %}
+    {% set toonTags = lt.length > 1 and lijst.length > 3 %}
+    {% set toonTypen = ltypen.length > 1 %}
+    {% set fid = page.url | slugify %}
+    {% if toonTags or toonTypen or metTekstfilter %}
+    <div class="filter" data-filter hidden>
+      {% if metTekstfilter %}
+      <div class="filter__rij">
+        <label class="filter__label" for="ft-{{ fid }}">{{ T.t.filterZoek }}</label>
+        <input class="filter__invoer" id="ft-{{ fid }}" type="search" placeholder="{{ T.t.filterPlaceholder }}" autocomplete="off" data-filter-tekst>
+      </div>
+      {% endif %}
+      {% if toonTypen %}
+      <div class="filter__rij">
+        <p class="filter__label" id="fs-{{ fid }}">{{ T.t.soort }}</p>
+        <div class="filter__knoppen" role="group" aria-labelledby="fs-{{ fid }}" data-groep="type">
+          <button type="button" aria-pressed="true" data-waarde="">{{ T.t.alles }}</button>
+          {% for ty in ltypen %}<button type="button" aria-pressed="false" data-waarde="{{ ty }}">{{ T.t.typen[ty] or ty }}</button>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if toonTags %}
+      <div class="filter__rij">
+        <p class="filter__label" id="fo-{{ fid }}">{{ T.t.onderwerpLabel if (toonTypen or metTekstfilter) else T.t.toonAlleen }}</p>
+        <div class="filter__knoppen" role="group" aria-labelledby="fo-{{ fid }}" data-groep="tag">
+          <button type="button" aria-pressed="true" data-waarde="">{{ T.t.alles }}</button>
+          {% for t in lt %}<button type="button" aria-pressed="false" data-waarde="{{ t.key }}">{{ t.label }}</button>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="items">
+      {% for item in lijst %}{{ kaart(item, T, toonPlek) }}{% endfor %}
+    </div>
+    <p class="leeg" data-leeg hidden aria-live="polite">{{ T.t.geenBijFilter }}</p>
+  {% else %}
+    <p class="leeg">{{ T.t.leegRubriek }}</p>
+  {% endif %}
+</div>

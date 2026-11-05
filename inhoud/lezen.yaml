@@ -1,0 +1,78 @@
+# & Lezen – zie _LEESMIJ.md voor uitleg van de velden
+volgorde: 2
+slug: lezen
+slug_en: reading
+naam: Lezen
+naam_en: Reading
+kort: Boeken van christenen uit vroeger tijden, per stroming.
+kort_en: Books by Christians from earlier centuries, by tradition.
+intro: Christenen van vroeger schreven over geloof en leven met een diepgang die nog altijd helpt. De boeken zijn geordend naar tijd en stroming, met bij elk boek een korte toelichting.
+intro_en: Christians of the past wrote about faith and life with a depth that still helps today. The books are arranged by period and tradition, each with a short introduction.
+
+sub:
+  - slug: reformatoren
+    slug_en: reformers
+    naam: Reformatoren
+    naam_en: Reformers
+    kort: Luther, Calvijn en tijdgenoten uit de zestiende eeuw.
+    kort_en: Luther, Calvin and their contemporaries in the sixteenth century.
+    intro: De Reformatie bracht de Bijbel terug in het midden van kerk en leven. Werken van de reformatoren zelf.
+    intro_en: The Reformation brought the Bible back to the centre of church and life. Works by the Reformers themselves.
+  - slug: puriteinen
+    slug_en: puritans
+    naam: Puriteinen
+    naam_en: Puritans
+    kort: Engelse schrijvers uit de zeventiende eeuw over het praktische geloofsleven.
+    kort_en: Seventeenth-century English writers on practical Christian living.
+    intro: De puriteinen schreven bevindelijk en praktisch over bekering, heiliging en het dagelijks leven met God.
+    intro_en: The Puritans wrote experientially and practically about conversion, sanctification and daily life with God.
+  - slug: nadere-reformatie
+    slug_en: further-reformation
+    naam: Nadere Reformatie
+    naam_en: Further Reformation
+    kort: Nederlandse schrijvers uit de zeventiende en achttiende eeuw.
+    kort_en: Dutch writers from the seventeenth and eighteenth centuries.
+    intro: De Nadere Reformatie wilde de Reformatie doortrekken naar het persoonlijk, gezins- en maatschappelijk leven.
+    intro_en: The Dutch Further Reformation sought to carry the Reformation into personal, family and public life.
+
+items:
+  - titel: De Christenreis naar de eeuwigheid
+    titel_en: The Pilgrim’s Progress (Dutch edition)
+    auteur: John Bunyan
+    omschrijving: Belangrijke literatuur die je meeneemt op de reis die een christen in zijn of haar leven kan meemaken, vol toespelingen op bijbelteksten.
+    omschrijving_en: An important classic that takes you along the journey a Christian may go through in life, full of allusions to Bible texts.
+    sub: puriteinen
+    type: boek
+    tags: [christenleven, puriteinen, bekering, voor beginners]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B05fGlTSx", partner: true }
+
+  - titel: Institutie
+    auteur: Johannes Calvijn
+    omschrijving: Calvijns onderwijzing in de christelijke godsdienst, het hoofdwerk van de Reformatie in Genève.
+    omschrijving_en: Calvin’s Institutes of the Christian Religion, the major work of the Reformation in Geneva. Dutch edition.
+    sub: reformatoren
+    type: boek
+    tags: [reformatie, calvijn, geloofsleer]
+    kanalen:
+      - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=calvijn+institutie" }
+
+  - titel: Verklaring van de Bijbel
+    auteur: Matthew Henry
+    omschrijving: Een praktische, stichtelijke verklaring van de hele Bijbel, vers voor vers.
+    omschrijving_en: A practical, devotional commentary on the whole Bible, verse by verse. Dutch edition.
+    sub: puriteinen
+    type: boek
+    tags: [puriteinen, bijbellezen]
+    kanalen:
+      - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=matthew+henry+verklaring" }
+
+  - titel: Redelijke godsdienst
+    auteur: Wilhelmus à Brakel
+    omschrijving: Een uitgebreide uiteenzetting van de geloofsleer én van het praktische christelijke leven.
+    omschrijving_en: The Christian’s Reasonable Service, an extensive treatment of doctrine and of practical Christian living. Dutch original.
+    sub: nadere-reformatie
+    type: boek
+    tags: [nadere reformatie, geloofsleer, heiliging]
+    kanalen:
+      - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=brakel+redelijke+godsdienst" }

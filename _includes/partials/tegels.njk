@@ -1,0 +1,12 @@
+{# Verwacht: tegels (url, naam, kort, optioneel aantal), metEn, T #}
+<ul class="tegels">
+  {% for t in tegels %}
+  <li>
+    <a class="tegel" href="{{ t.url }}">
+      <span class="tegel__naam">{% if metEn %}<span class="en" aria-hidden="true">&amp;</span>{% endif %}{{ t.naam }}</span>
+      <span class="tegel__kort">{{ t.kort }}</span>
+      {% if t.aantal is defined %}<span class="tegel__aantal">{{ t.aantal }} {{ T.t.bron if t.aantal == 1 else T.t.bronnenMv }}</span>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+<header class="kop">
+  <div class="wrap kop__binnen">
+    <a class="logo" href="{{ T.pre }}/"><img src="/img/logo.svg" alt="{{ T.t.logoLabel }}" width="879" height="231"></a>
+    <div class="kop__acties">
+      <a class="taalwissel" href="{{ A[ander] or (inhoud.talen[ander].pre + '/') }}" hreflang="{{ ander }}" lang="{{ ander }}" aria-label="{{ T.t.taalWisselLabel }}"><span class="taalwissel__lang">{{ T.t.taalWissel }}</span><span class="taalwissel__kort" aria-hidden="true">{{ ander | upper }}</span></a>
+      <a class="zoekknop" href="{{ T.t.urls.zoeken }}"{% if page.url == T.t.urls.zoeken %} aria-current="page"{% endif %}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <span class="zoekknop__tekst">{{ T.t.zoeken }}</span>
+      </a>
+      <button class="menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu">{{ T.t.menu }}</button>
+    </div>
+    <nav id="hoofdmenu" class="hoofdmenu" aria-label="{{ T.t.hoofdmenu }}">
+      <ul>
+        {%- for r in T.rubrieken %}
+        <li><a href="{{ r.url }}"{% if page.url.startsWith(r.url) %} aria-current="true"{% endif %}><span class="en" aria-hidden="true">&amp;</span>{{ r.naam }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

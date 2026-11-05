@@ -8,13 +8,13 @@ Wegwijs in het christelijk leven. Statische website gebouwd met [Eleventy](https
 2. Ga in GitHub naar **Settings → Pages** en kies bij *Source* voor **GitHub Actions**.
 3. De workflow *Publiceren* bouwt en publiceert de site bij elke push. Eerste adres: `https://hoowgii.github.io/Christen/`.
 
-## Eigen domein (christen.nl)
+## Eigen domein (christen-en.nl)
 
-1. **Settings → Pages → Custom domain**: vul `christen.nl` in.
+1. **Settings → Pages → Custom domain**: vul `christen-en.nl` in.
 2. Stel bij Hostnet de DNS in volgens de GitHub-documentatie over custom domains (A-records voor het hoofddomein, CNAME voor `www`).
 3. Zet *Enforce HTTPS* aan zodra het certificaat klaar is.
 
-De links passen zich automatisch aan: op github.io staat alles onder `/Christen/`, op christen.nl in de root.
+De links passen zich automatisch aan: op github.io staat alles onder `/Christen/`, op christen-en.nl in de root.
 
 ## Talen (NL/EN)
 
@@ -39,7 +39,7 @@ Automatisch gegenereerd bij elke build:
 - Structured data (JSON-LD): WebSite op de startpagina's, BreadcrumbList op alle onderliggende pagina's
 - Zoekpagina's en 404 staan op `noindex`
 
-`robots.txt`, `sitemap.xml` en `llms.txt` werken pas echt zodra de site op christen.nl draait: crawlers zoeken ze in de root van het domein. Meld daarna de sitemap aan in Google Search Console en Bing Webmaster Tools.
+`robots.txt`, `sitemap.xml` en `llms.txt` werken pas echt zodra de site op christen-en.nl draait: crawlers zoeken ze in de root van het domein. Meld daarna de sitemap aan in Google Search Console en Bing Webmaster Tools.
 
 ## Licentie
 
@@ -66,6 +66,7 @@ Overige teksten:
 - Vertaling van onderwerpen: `src/_data/tags.yaml`
 - Losse pagina's: `src/begin-hier.njk`, `src/over.njk`, `src/disclaimer.njk` (Engels in `src/en/`)
 - Sitenaam en domein: `src/_data/site.yaml`
+- Kerkgeschiedenis (tekening en tekst): `src/_data/kerkgeschiedenis.yaml`
 
 Kleine wijzigingen kun je direct in GitHub doen: open het bestand, klik op het potlood, pas aan en kies *Commit changes*. De site wordt dan automatisch opnieuw gepubliceerd.
 
