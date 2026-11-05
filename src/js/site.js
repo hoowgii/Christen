@@ -59,10 +59,10 @@
 
   const lang = document.documentElement.lang === "en" ? "en" : "nl";
   const TEKST = {
-    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website)", onderwerpen: "Onderwerpen",
+    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website, opent in nieuw tabblad)", onderwerpen: "Onderwerpen",
           een: "resultaat", meer: "resultaten", voor: "voor", niets: (q) => `Niets gevonden voor “${q}”. Probeer een ander woord, of bekijk alle onderwerpen.`,
           fout: "Zoeken is nu niet beschikbaar. Vernieuw de pagina en probeer het opnieuw." },
-    en: { in: "In", bekijkBij: "View at", extern: " (external website)", onderwerpen: "Topics",
+    en: { in: "In", bekijkBij: "View at", extern: " (external website, opens in a new tab)", onderwerpen: "Topics",
           een: "result", meer: "results", voor: "for", niets: (q) => `Nothing found for “${q}”. Try another word, or browse all topics.`,
           fout: "Search is not available right now. Reload the page and try again." },
   }[lang];
@@ -149,6 +149,9 @@
       voet.append(ul);
     }
     art.append(voet);
+    art.querySelectorAll("a[href^='http']").forEach((a) => {
+      if (new URL(a.href).hostname !== location.hostname) { a.target = "_blank"; a.rel = [...new Set((a.rel + " noopener noreferrer").split(" ").filter(Boolean))].join(" "); }
+    });
     return art;
   }
 
