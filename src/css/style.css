@@ -304,9 +304,12 @@ a:hover { color: var(--lezersblauw-donker); text-decoration-thickness: 2px; }
 .kg text { stroke: none; }
 .kg__lijn { fill: none; stroke-width: 1.75; stroke-linecap: butt; stroke-linejoin: round; }
 .kg__lijn--direct { stroke: var(--statenblauw); }
-.kg__lijn--invloed { stroke: var(--leisteen); stroke-dasharray: 6 5; }
+.kg__lijn--aftakking { stroke: var(--donkergoud); stroke-dasharray: 9 5; }
+.kg__lijn--invloed { stroke: var(--leisteen); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 0.1 5; }
 .kg__pijl { fill: var(--statenblauw); stroke: none; }
+.kg__pijl--aftakking { fill: var(--donkergoud); }
 .kg__pijl--invloed { fill: var(--leisteen); }
+.kg text.kg__lijnlabel { font: italic 400 14px var(--serif); fill: var(--inkt); paint-order: stroke; stroke: var(--ivoor); stroke-width: 4px; stroke-linejoin: round; }
 .kg__rk { font: italic 400 15px var(--serif); fill: var(--leisteen); }
 .kg__knoop rect { fill: var(--wit); stroke: var(--statenblauw); stroke-width: 1.5; transition: fill .15s; }
 .kg__knoop--extern rect { stroke-width: 2.5; }
