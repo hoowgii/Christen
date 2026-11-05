@@ -15,6 +15,7 @@
     <h2 id="kg-legenda-titel" class="kg-legenda__titel">{{ KT.legendaTitel }}</h2>
     <ul>
       <li><svg aria-hidden="true" width="48" height="12" viewBox="0 0 48 12"><path class="kg__lijn kg__lijn--direct" d="M2 6 H46"/></svg>{{ KT.legendaDirect }}</li>
+      <li><svg aria-hidden="true" width="48" height="12" viewBox="0 0 48 12"><path class="kg__lijn kg__lijn--aftakking" d="M2 6 H46"/></svg>{{ KT.legendaAftakking }}</li>
       <li><svg aria-hidden="true" width="48" height="12" viewBox="0 0 48 12"><path class="kg__lijn kg__lijn--invloed" d="M2 6 H46"/></svg>{{ KT.legendaInvloed }}</li>
       <li><span class="kg-legenda__extern" aria-hidden="true">↗</span>{{ KT.legendaExtern }}</li>
     </ul>
@@ -25,6 +26,7 @@
     <svg class="kg" viewBox="0 0 {{ G.breedte }} {{ G.hoogte }}" role="group" aria-label="{{ KT.tekeningLabel }}">
       <defs>
         <marker id="kg-pijl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="kg__pijl"/></marker>
+        <marker id="kg-pijl-aftakking" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="kg__pijl kg__pijl--aftakking"/></marker>
         <marker id="kg-pijl-invloed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="kg__pijl kg__pijl--invloed"/></marker>
       </defs>
       <g aria-hidden="true">
@@ -33,8 +35,9 @@
         <text class="kg__rk" x="{{ G.rk.tx }}" y="{{ G.rk.ty }}" text-anchor="middle">{{ KT.rkDoorloop }}</text>
         {% endif %}
         {% for l in G.lijnen %}
-        <path class="kg__lijn kg__lijn--{{ l.soort }}" d="{{ l.d }}" marker-end="url(#{{ 'kg-pijl' if l.soort == 'direct' else 'kg-pijl-invloed' }})"/>
+        <path class="kg__lijn kg__lijn--{{ l.soort }}" d="{{ l.d }}" marker-end="url(#{{ 'kg-pijl' if l.soort == 'direct' else 'kg-pijl-' + l.soort }})"/>
         {% endfor %}
+        {% for l in G.lijnen %}{% if l.label %}<text class="kg__lijnlabel" x="{{ l.lx }}" y="{{ l.ly }}" text-anchor="middle">{{ l.label }}</text>{% endif %}{% endfor %}
       </g>
       {% for k in G.knopen %}
       <a class="kg__knoop{% if k.extern %} kg__knoop--extern{% endif %}" href="{{ k.href }}"{% if k.extern %} rel="noopener"{% endif %} aria-label="{{ k.naam }}{% if k.jaar %}, {{ k.jaar }}{% endif %}{% if k.extern %} {{ KT.extern }}{% endif %}">
@@ -52,9 +55,10 @@
     <li id="kg-{{ k.id }}">
       <h3>{{ k.naam }}{% if k.jaar %} <span class="kg-lijst__jaar">{{ k.jaar }}</span>{% endif %}</h3>
       <p>{{ k.omschrijving }}</p>
-      {% if k.direct.length or k.invloed.length %}
+      {% if k.direct.length or k.aftakking.length or k.invloed.length %}
       <ul class="kg-lijst__rel">
         {% if k.direct.length %}<li>{{ KT.direct }} {% for r in k.direct %}<a href="#kg-{{ r.id }}">{{ r.naam }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</li>{% endif %}
+        {% if k.aftakking.length %}<li>{{ KT.aftakking }} {% for r in k.aftakking %}<a href="#kg-{{ r.id }}">{{ r.naam }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</li>{% endif %}
         {% if k.invloed.length %}<li>{{ KT.invloed }} {% for r in k.invloed %}<a href="#kg-{{ r.id }}">{{ r.naam }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</li>{% endif %}
       </ul>
       {% endif %}
