@@ -53,6 +53,9 @@
   {%- endif %}
   <script>document.documentElement.classList.add("js")</script>
   <script src="/js/site.js" defer></script>
+  {%- if site.goatcounter %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  {%- endif %}
 </head>
 <body>
   <a class="skiplink" href="#inhoud">{{ T.t.naarInhoud }}</a>
