@@ -336,3 +336,24 @@ a:hover { color: var(--lezersblauw-donker); text-decoration-thickness: 2px; }
 .kg-lijst__link { font-size: 0.9375rem; font-weight: 600; }
 
 @media (max-width: 899px) { .kg-visual { display: none; } }
+
+/* ---------- Contactformulier ---------- */
+.contact { max-width: 36rem; display: grid; gap: var(--s3); }
+.contact__veld { display: grid; gap: 0.375rem; }
+.contact label { font-weight: 600; color: var(--statenblauw); }
+.contact__verplicht { font-weight: 400; color: var(--leisteen); font-size: 0.875rem; }
+.contact input, .contact textarea {
+  font: 400 1.0625rem/1.5 var(--sans); color: var(--inkt); background: var(--wit);
+  padding: 0.75rem 0.875rem; border: 1px solid var(--leisteen); border-radius: var(--radius); width: 100%;
+}
+.contact textarea { resize: vertical; min-height: 10rem; }
+.contact input:focus-visible, .contact textarea:focus-visible { outline-offset: 0; }
+.contact [aria-invalid="true"] { border-color: #A3261D; }
+.contact__hulp { margin: 0; font-size: 0.875rem; color: var(--leisteen); }
+.contact .knop { justify-self: start; }
+.contact .knop[disabled] { opacity: 0.6; cursor: wait; }
+.contact__lok { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact__status { margin: 0; font-weight: 600; min-height: 1.65em; }
+.contact__status--gelukt { color: #1F6B3A; }
+.contact__status--fout { color: #A3261D; }
+.contact__privacy { margin: 0; font-size: 0.875rem; color: var(--leisteen); }

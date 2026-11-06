@@ -21,6 +21,7 @@ nl:
   bronnen: Bronnenbeleid
   privacy: Privacy
   disclaimer: Disclaimer
+  contact: Contact
   voetTekst: Wegwijs in het christelijk leven. Voor wie net begint, en voor wie al lang onderweg is.
   voetNoot: Christen& wijst de weg naar bronnen, maar vervangt geen kerk. Zoek een Bijbelgetrouwe gemeente bij jou in de buurt.
   toonAlleen: Toon alleen
@@ -61,7 +62,20 @@ nl:
     - { titel: Zoek een kerk, tekst: "Geloven doe je niet alleen. Ga naar de kerk en luister naar de prediking.", url: /woord/verkondigd/ }
     - { titel: Leer bidden, tekst: "Breng alles bij God. Het Onze Vader is een goed begin.", url: "/begin-hier/#bidden" }
     - { titel: Stel je vragen, tekst: "Twijfels en vragen horen erbij. Je hoeft er niet alleen mee te blijven.", url: /verdiepen/ }
-  urls: { zoeken: /zoeken/, onderwerpen: /onderwerpen/, over: /over/, disclaimer: /disclaimer/ }
+  urls: { zoeken: /zoeken/, onderwerpen: /onderwerpen/, over: /over/, disclaimer: /disclaimer/, contact: /contact/ }
+  contactForm:
+    intro: Heb je een vraag, een opmerking, of weet je een goede bron die op Christen& niet mag ontbreken? Laat het ons weten.
+    naam: Naam
+    email: E-mailadres
+    emailHulp: Zodat we je kunnen antwoorden.
+    bericht: Bericht
+    verplicht: verplicht
+    verstuur: Verstuur bericht
+    bezig: Bezig met versturen…
+    gelukt: Dank je wel! Je bericht is verstuurd. We reageren zo snel mogelijk.
+    fout: Het versturen is niet gelukt. Controleer de velden en probeer het opnieuw.
+    privacy: Je bericht wordt verstuurd via de formulierdienst Formspree en alleen gebruikt om je vraag te beantwoorden.
+    onderwerp: Bericht via christen-en.nl
   beschrijving: Wegwijs in het christelijk leven. Betrouwbare bronnen om de Bijbel te lezen, te zingen, te verdiepen en het geloof in praktijk te brengen.
 
 en:
@@ -86,6 +100,7 @@ en:
   bronnen: Source policy
   privacy: Privacy
   disclaimer: Disclaimer
+  contact: Contact
   voetTekst: Finding your way in the Christian life. For those just starting out, and for those who have walked it for years.
   voetNoot: Christen& points to resources, but does not replace a church. Find a Bible-faithful congregation near you.
   toonAlleen: Show only
@@ -126,5 +141,18 @@ en:
     - { titel: Find a church, tekst: "Faith is not lived alone. Go to church and listen to the preaching.", url: /en/word/preached/ }
     - { titel: Learn to pray, tekst: "Bring everything to God. The Lord’s Prayer is a good place to begin.", url: "/en/start-here/#pray" }
     - { titel: Ask your questions, tekst: "Doubts and questions are part of it. You don’t have to carry them alone.", url: /en/going-deeper/ }
-  urls: { zoeken: /en/search/, onderwerpen: /en/topics/, over: /en/about/, disclaimer: /en/disclaimer/ }
+  urls: { zoeken: /en/search/, onderwerpen: /en/topics/, over: /en/about/, disclaimer: /en/disclaimer/, contact: /en/contact/ }
+  contactForm:
+    intro: Do you have a question or a comment, or do you know a good resource that should be on Christen&? Let us know.
+    naam: Name
+    email: Email address
+    emailHulp: So we can reply to you.
+    bericht: Message
+    verplicht: required
+    verstuur: Send message
+    bezig: Sending…
+    gelukt: Thank you! Your message has been sent. We will reply as soon as possible.
+    fout: Your message could not be sent. Please check the fields and try again.
+    privacy: Your message is sent through the form service Formspree and only used to answer your question.
+    onderwerp: Message via christen-en.nl (English)
   beschrijving: Finding your way in the Christian life. Reliable resources for reading the Bible, singing, going deeper and living out the faith.

@@ -52,6 +52,33 @@
     if (invoer) invoer.addEventListener("input", () => { clearTimeout(wacht); wacht = setTimeout(pasToe, 150); });
   });
 
+  /* ---------- Contactformulier (Formspree) ---------- */
+  // Zonder JavaScript werkt het formulier als gewone POST; hiermee blijft de bezoeker op de pagina.
+  document.querySelectorAll("[data-contact]").forEach((form) => {
+    const knop = form.querySelector("[data-contact-knop]");
+    const status = form.querySelector("[data-contact-status]");
+    const zet = (tekst, soort) => {
+      status.textContent = tekst;
+      status.className = "contact__status" + (soort ? ` contact__status--${soort}` : "");
+    };
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      form.querySelectorAll("[aria-invalid]").forEach((v) => v.removeAttribute("aria-invalid"));
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      knop.disabled = true; zet(form.dataset.bezig);
+      try {
+        const r = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        if (r.ok) { form.reset(); zet(form.dataset.gelukt, "gelukt"); }
+        else {
+          const d = await r.json().catch(() => ({}));
+          (d.errors || []).forEach((fout) => { const v = fout.field && form.elements[fout.field]; if (v) v.setAttribute("aria-invalid", "true"); });
+          zet(form.dataset.fout, "fout");
+        }
+      } catch { zet(form.dataset.fout, "fout"); }
+      knop.disabled = false;
+    });
+  });
+
   /* ---------- Zoeken ---------- */
   const zoek = document.querySelector("[data-zoeken]");
   const indexLink = document.querySelector("link[data-zoekindex]");

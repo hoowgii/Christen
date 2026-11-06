@@ -1,0 +1,40 @@
+{% from "partials/kruimel.njk" import kruimel %}
+{% set C = T.t.contactForm %}
+<div class="wrap pagina">
+  {{ kruimel([{ "naam": site.naam, "url": T.pre + "/" }, { "naam": T.t.contact, "url": page.url }], T, site) }}
+  <header class="paginakop">
+    <h1>{{ T.t.contact }}</h1>
+    <p class="intro">{{ C.intro }}</p>
+  </header>
+
+  {# Werkt ook zonder JavaScript (gewone POST naar Formspree); met JavaScript blijft de bezoeker op deze pagina #}
+  <form class="contact" action="https://formspree.io/f/{{ site.formspree }}" method="POST" data-contact
+        data-bezig="{{ C.bezig }}" data-gelukt="{{ C.gelukt }}" data-fout="{{ C.fout }}">
+    <input type="hidden" name="_subject" value="{{ C.onderwerp }}">
+    <input type="hidden" name="taal" value="{{ lang }}">
+
+    <div class="contact__veld">
+      <label for="c-naam">{{ C.naam }} <span class="contact__verplicht">({{ C.verplicht }})</span></label>
+      <input id="c-naam" name="name" type="text" autocomplete="name" required maxlength="120">
+    </div>
+    <div class="contact__veld">
+      <label for="c-email">{{ C.email }} <span class="contact__verplicht">({{ C.verplicht }})</span></label>
+      <input id="c-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="c-email-hulp">
+      <p class="contact__hulp" id="c-email-hulp">{{ C.emailHulp }}</p>
+    </div>
+    <div class="contact__veld">
+      <label for="c-bericht">{{ C.bericht }} <span class="contact__verplicht">({{ C.verplicht }})</span></label>
+      <textarea id="c-bericht" name="message" rows="7" required maxlength="5000"></textarea>
+    </div>
+
+    {# Lokveld tegen spam: onzichtbaar voor bezoekers, bots vullen het in #}
+    <div class="contact__lok" aria-hidden="true">
+      <label for="c-gotcha">Laat dit veld leeg</label>
+      <input id="c-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button class="knop" type="submit" data-contact-knop>{{ C.verstuur }}</button>
+    <p class="contact__status" data-contact-status role="status" aria-live="polite"></p>
+    <p class="contact__privacy">{{ C.privacy }} <a href="{{ T.t.urls.over }}#privacy">{{ T.t.privacy }}</a></p>
+  </form>
+</div>
