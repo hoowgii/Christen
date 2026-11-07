@@ -1,19 +1,30 @@
-{# Verwacht: lijst, T, optioneel toonPlek en metTekstfilter #}
+{# Verwacht: lijst, T, optioneel toonPlek, metTekstfilter en metSchappen (& Winkel: filter op categorie i.p.v. onderwerp) #}
 {% from "partials/kaart.njk" import kaart %}
 <div class="lijst" data-lijst>
   {% if lijst.length %}
     {% if lijst | heeftPartner %}<p class="melding">{{ T.t.partnerMelding }}</p>{% endif %}
     {% set lt = lijst | lijstTags %}
     {% set ltypen = lijst | lijstTypen %}
-    {% set toonTags = lt.length > 1 and lijst.length > 3 %}
+    {% set lschappen = (lijst | lijstSchappen(T.schappen)) if metSchappen else [] %}
+    {% set toonSchappen = lschappen.length > 1 %}
+    {% set toonTags = lt.length > 1 and lijst.length > 3 and not toonSchappen %}
     {% set toonTypen = ltypen.length > 1 %}
     {% set fid = page.url | slugify %}
-    {% if toonTags or toonTypen or metTekstfilter %}
+    {% if toonTags or toonTypen or toonSchappen or metTekstfilter %}
     <div class="filter" data-filter hidden>
       {% if metTekstfilter %}
       <div class="filter__rij">
         <label class="filter__label" for="ft-{{ fid }}">{{ T.t.filterZoek }}</label>
         <input class="filter__invoer" id="ft-{{ fid }}" type="search" placeholder="{{ T.t.filterPlaceholder }}" autocomplete="off" data-filter-tekst>
+      </div>
+      {% endif %}
+      {% if toonSchappen %}
+      <div class="filter__rij">
+        <p class="filter__label" id="fc-{{ fid }}">{{ T.t.categorie }}</p>
+        <div class="filter__knoppen" role="group" aria-labelledby="fc-{{ fid }}" data-groep="schap">
+          <button type="button" aria-pressed="true" data-waarde="">{{ T.t.alles }}</button>
+          {% for s in lschappen %}<button type="button" aria-pressed="false" data-waarde="{{ s.key }}">{{ s.naam }}</button>{% endfor %}
+        </div>
       </div>
       {% endif %}
       {% if toonTypen %}

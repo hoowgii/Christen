@@ -69,7 +69,8 @@ items:
     omschrijving_en: A translation that stays as close as possible to the original text. In Dutch.
     sub: bijbel
     type: bijbel
-    tags: [statenvertaling]
+    schap: bijbel
+    tags: [statenvertaling, bijbelvertaling]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B09aAevw4", partner: true }
 
@@ -79,17 +80,21 @@ items:
     omschrijving_en: The Revised States Translation, close to the States Translation but in contemporary Dutch.
     sub: bijbel
     type: bijbel
+    schap: bijbel
+    tags: [bijbelvertaling, bijbellezen]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
 
-  - titel: HSV-Studiebijbel
-    titel_en: HSV Study Bible
-    omschrijving: De Herziene Statenvertaling met toelichting en achtergronden om de Bijbel grondig te bestuderen.
-    omschrijving_en: The Revised States Translation with notes and background for thorough Bible study. In Dutch.
+  - titel: HSV Compacte Studiebijbel
+    titel_en: HSV Compact Study Bible
+    omschrijving: De Herziene Statenvertaling met toelichting en achtergronden om de Bijbel grondig te bestuderen, in een compacte uitvoering.
+    omschrijving_en: The Revised States Translation with notes and background for thorough Bible study, in a compact edition. In Dutch.
     sub: bijbel
     type: bijbel
+    schap: bijbel
+    tags: [bijbelstudie]
     kanalen:
-      - { aanbieder: Amazon, url: "https://link.amazon/B0eskvA77", partner: true }
+      - { aanbieder: Amazon, url: "https://link.amazon/B0b9aNXUJ", partner: true }
 
   - titel: HSV-Jongerenbijbel
     titel_en: HSV Youth Bible
@@ -97,9 +102,10 @@ items:
     omschrijving_en: A Bible with extra explanation to help you understand Bible passages better. In Dutch.
     sub: bijbel
     type: bijbel
+    schap: bijbel
     tags: [jongeren, voor beginners]
     kanalen:
-      - { aanbieder: Amazon, url: "https://link.amazon/B07eHuxW4", partner: true }
+      - { aanbieder: Amazon, url: "https://link.amazon/B0crInhJU", partner: true }
 
   - titel: NBV21 Bijbel
     titel_en: NBV21 Bible
@@ -107,8 +113,21 @@ items:
     omschrijving_en: A translation focused on clear, contemporary Dutch.
     sub: bijbel
     type: bijbel
+    schap: bijbel
+    tags: [bijbelvertaling, bijbellezen]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B0aC1nHrf", partner: true }
+
+  - titel: Bijbel in Gewone Taal met praktische uitleg
+    titel_en: Bible in Plain Dutch with practical explanation
+    omschrijving: De complete Bijbel in Gewone Taal met inleidingen, achtergrondinformatie, uitlegkaders, toepassingsvragen, kaarten en leesroosters. Geschikt voor wie begint met bijbellezen en voor kringen.
+    omschrijving_en: The complete Bijbel in Gewone Taal (Bible in Plain Dutch) with introductions, background, explanatory panels, application questions, maps and reading plans. Suited to those starting to read the Bible and to study groups. In Dutch.
+    sub: bijbel
+    type: bijbel
+    schap: bijbel
+    tags: [bijbelstudie, bijbelvertaling, voor beginners, kringmateriaal]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B04701o9S", partner: true }
 
   # ---------- Bijbel: apps ----------
   - titel: Mijn Bijbel

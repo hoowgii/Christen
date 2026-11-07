@@ -47,6 +47,9 @@ function bouwTaal(l, { rubrieken, items, tags, tekst }) {
     }));
     return R;
   });
+  // Categorieën van & Winkel ('schappen' in de rubriek met verzamel: winkel)
+  const winkel = rubrieken.find((r) => r.verzamel === "winkel") || {};
+  const schappen = (winkel.schappen || []).map((s) => ({ key: s.slug, naam: kies(s, "naam", l) }));
   const tagLabel = (t) => (l === STANDAARD ? t : tags[t] || t);
   const tagObj = (t) => ({ key: t, label: tagLabel(t), url: `${pre}/${tagMap[l]}/${slug(tagLabel(t))}/` });
   const its = items.filter(inTaal).map((i) => {
@@ -54,21 +57,32 @@ function bouwTaal(l, { rubrieken, items, tags, tekst }) {
     const s = r && r.sub.find((x) => x.key === i.sub);
     return {
       titel: kies(i, "titel", l), auteur: i.auteur || "", omschrijving: kies(i, "omschrijving", l) || "",
-      url: kies(i, "url", l) || "", type: i.type || "", kanalen: i.kanalen || [],
+      url: kies(i, "url", l) || "", type: i.type || "", schap: i.schap || "", kanalen: i.kanalen || [],
       links: (i.links || []).map((k) => ({ tekst: kies(k, "tekst", l), url: k.url, aanbieder: k.aanbieder || "", partner: !!k.partner })),
       alleenWinkel: !!i.alleen_winkel,
       rubriek: i.rubriek, sub: i.sub || null,
       tagKeys: i.tags || [], tags: (i.tags || []).map(tagObj),
-      plek: r ? { naam: `& ${r.naam}${s ? ", " + s.naam : ""}`, url: s ? s.url : r.url } : null,
+      // Items die in & Winkel zelf staan, hebben geen andere plek op de site
+      plek: r && !r.verzamel ? { naam: `& ${r.naam}${s ? ", " + s.naam : ""}`, url: s ? s.url : r.url } : null,
     };
   });
   const onderwerpen = [...new Set(items.filter(inTaal).flatMap((i) => i.tags || []))]
     .map(tagObj).sort((a, b) => a.label.localeCompare(b.label, l));
-  return { lang: l, pre, t: tekst[l], rubrieken: rub, items: its, onderwerpen };
+  return { lang: l, pre, t: tekst[l], rubrieken: rub, items: its, onderwerpen, schappen };
+}
+
+// Waarschuwing in de buildlog als een product geen (bekend) schap heeft
+function controleerSchappen({ rubrieken, items }) {
+  const winkel = rubrieken.find((r) => r.verzamel === "winkel");
+  if (!winkel) return;
+  const bekend = new Set((winkel.schappen || []).map((s) => s.slug));
+  items.filter((i) => (i.kanalen || []).length && !bekend.has(i.schap))
+    .forEach((i) => console.warn(`[inhoud] "${i.titel}" (${i.rubriek}.yaml) heeft kanalen maar geen geldig 'schap'.`));
 }
 
 export default function () {
   const bron = laadBron();
+  controleerSchappen(bron);
   const talen = Object.fromEntries(TALEN.map((l) => [l, bouwTaal(l, bron)]));
   const alts = (zoek) => Object.fromEntries(TALEN.map((l) => [l, zoek(talen[l])]).filter(([, u]) => u));
   const rubriekUrl = (T, key) => (T.rubrieken.find((x) => x.key === key) || {}).url;

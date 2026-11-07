@@ -22,6 +22,16 @@ items:
       - { tekst: Google Play, url: "https://play.google.com/store/apps/details?id=com.bible.kids&hl=nl" }
       - { tekst: App Store, url: "https://apps.apple.com/nl/app/de-bijbel-app-voor-kinderen/id668692393" }
 
+  - titel: Kinderbijbel bij de Herziene Statenvertaling
+    titel_en: Children’s Bible based on the Revised States Translation
+    omschrijving: Kinderbijbel met verhalen die dicht bij de Herziene Statenvertaling blijven, Bijbelteksten om te leren, gespreksvragen en uitleg van belangrijke geloofsbegrippen. Met aandacht voor de doorgaande lijn van de heilsgeschiedenis.
+    omschrijving_en: Children’s Bible with stories that stay close to the Revised States Translation, Bible verses to learn, discussion questions and explanation of key terms of the faith. It follows the continuous line of salvation history. In Dutch.
+    type: bijbel
+    schap: bijbel
+    tags: [kinderen, gezin, bijbelverhalen, begrippen]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0eIIR7lT", partner: true }
+
   # ---------- Gezinsdagen en fairs (terugkerend; data staan bij de organisator) ----------
   - titel: Familiedagen Gorinchem
     url: https://www.familiedagen.nl/

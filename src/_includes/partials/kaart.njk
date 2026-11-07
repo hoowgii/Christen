@@ -1,5 +1,5 @@
 {% macro kaart(item, T, toonPlek) %}
-<article class="item" data-tags="{{ item.tagKeys | join('|') }}" data-type="{{ item.type }}" data-zoek="{{ [item.titel, item.auteur, item.omschrijving] | join(' ') | lower }}">
+<article class="item" data-tags="{{ item.tagKeys | join('|') }}" data-type="{{ item.type }}"{% if item.schap %} data-schap="{{ item.schap }}"{% endif %} data-zoek="{{ [item.titel, item.auteur, item.omschrijving] | join(' ') | lower }}">
   <h3 class="item__titel">
     {%- if item.url and not item.kanalen.length %}<a href="{{ item.url }}" rel="noopener">{{ item.titel }}</a>{% else %}{{ item.titel }}{% endif -%}
   </h3>

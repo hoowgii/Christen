@@ -43,19 +43,21 @@ items:
     omschrijving_en: An important classic that takes you along the journey a Christian may go through in life, full of allusions to Bible texts.
     sub: puriteinen
     type: boek
+    schap: christelijk-leven
     tags: [christenleven, puriteinen, bekering, voor beginners]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B05fGlTSx", partner: true }
 
-  - titel: Institutie
+  - titel: "Institutie: Onderwijs in de christelijke godsdienst"
     auteur: Johannes Calvijn
-    omschrijving: Calvijns onderwijzing in de christelijke godsdienst, het hoofdwerk van de Reformatie in Genève.
-    omschrijving_en: Calvin’s Institutes of the Christian Religion, the major work of the Reformation in Geneva. Dutch edition.
+    omschrijving: Calvijns overzicht van de christelijke leer, het hoofdwerk van de Reformatie in Genève, in een moderne Nederlandse vertaling. Bedoeld als toegang tot de Schrift en de gereformeerde geloofsleer.
+    omschrijving_en: Calvin’s Institutes of the Christian Religion, the major work of the Reformation in Geneva and an overview of Christian doctrine, in a modern Dutch translation. Intended as a way into Scripture and Reformed doctrine.
     sub: reformatoren
     type: boek
+    schap: kerkgeschiedenis
     tags: [reformatie, calvijn, geloofsleer]
     kanalen:
-      - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=calvijn+institutie" }
+      - { aanbieder: Amazon, url: "https://link.amazon/B09aCVGeP", partner: true }
 
   - titel: Verklaring van de Bijbel
     auteur: Matthew Henry
@@ -63,6 +65,7 @@ items:
     omschrijving_en: A practical, devotional commentary on the whole Bible, verse by verse. Dutch edition.
     sub: puriteinen
     type: boek
+    schap: bijbel
     tags: [puriteinen, bijbellezen]
     kanalen:
       - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=matthew+henry+verklaring" }
@@ -73,6 +76,7 @@ items:
     omschrijving_en: The Christian’s Reasonable Service, an extensive treatment of doctrine and of practical Christian living. Dutch original.
     sub: nadere-reformatie
     type: boek
+    schap: verdieping
     tags: [nadere reformatie, geloofsleer, heiliging]
     kanalen:
       - { aanbieder: bol.com, url: "https://www.bol.com/nl/nl/s/?searchtext=brakel+redelijke+godsdienst" }

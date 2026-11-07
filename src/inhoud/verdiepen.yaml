@@ -16,7 +16,7 @@ tekst: |
   Vragen over het geloof zijn niet nieuw. Daarom zijn er in de kerkgeschiedenis in verschillende landen vragen en antwoorden opgesteld over de kern van het geloof: een catechismus. In Nederland is de Heidelbergse Catechismus (1563) de bekendste. Op [heidelbergse-catechismus.nl](https://www.heidelbergse-catechismus.nl/) vind je de vragen en antwoorden, met een hedendaagse versie en bewijsteksten. In veel gemeenten wordt de catechismus in de middagdienst uitgelegd en bepreekt; zie [Verkondigd](/woord/verkondigd/).
 
   ### Kerkgeschiedenis
-  Hoe zijn de kerken in Nederland ontstaan? De [vereenvoudigde kerkgeschiedenis](/kerkgeschiedenis/) laat de hoofdlijn zien, van de vroege kerk tot de kerkverbanden van nu.
+  Hoe zijn de kerken in Nederland ontstaan? De [vereenvoudigde kerkgeschiedenis](/kerkgeschiedenis/) laat de hoofdlijn zien, van de vroege kerk tot de kerkverbanden van nu. Wie verder wil lezen, vindt boeken en bronnen bij het onderwerp [kerkgeschiedenis](/onderwerp/kerkgeschiedenis/).
 
   ### Studie
   Wil je verder, bijvoorbeeld met een opleiding of cursus theologie? Kijk bij [Studie en verdieping](/verdiepen/studie-verdieping/).
@@ -28,7 +28,7 @@ tekst_en: |
   Questions about faith are not new. That is why, over the history of the church, questions and answers on the heart of the faith were written in several countries: a catechism. In the Netherlands the best known is the Heidelberg Catechism (1563). On [heidelbergse-catechismus.nl](https://www.heidelbergse-catechismus.nl/) you can find its questions and answers, with a contemporary version and proof texts (in Dutch). In many congregations the catechism is explained and preached in the afternoon service; see [Preached](/en/word/preached/).
 
   ### Church history
-  How did the churches in the Netherlands come about? The [simplified church history](/en/church-history/) shows the main line, from the early church to today’s denominations.
+  How did the churches in the Netherlands come about? The [simplified church history](/en/church-history/) shows the main line, from the early church to today’s denominations. For further reading, see the topic [church history](/en/topic/church-history/).
 
 sub:
   - slug: studie-verdieping
@@ -61,6 +61,25 @@ items:
     tags: [geloofsleer, jongeren, catechese, bijbelstudie, begrippen]
     links:
       - { tekst: Over ABC van het geloof, url: "https://abcvanhetgeloof.nl/over-abc" }
+
+  - titel: In alle redelijkheid
+    auteur: Timothy Keller
+    omschrijving: Tim Keller bespreekt bekende vragen en bezwaren tegen het christelijk geloof, zoals lijden, de hel, waarheid en geweld in naam van religie, en laat zien dat geloven ook inhoudelijk doordacht kan zijn.
+    omschrijving_en: Dutch edition of The Reason for God. Tim Keller discusses common questions and objections to the Christian faith, such as suffering, hell, truth and violence in the name of religion, and shows that faith can be thought through.
+    type: boek
+    schap: verdieping
+    tags: [apologetiek, geloofsvragen]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0baO3vMn", partner: true }
+
+  - titel: Handboek Nederlandse kerkgeschiedenis
+    omschrijving: Uitgebreid overzicht van de geschiedenis van de kerk in de Lage Landen, met aandacht voor kerkelijke, maatschappelijke en culturele ontwikkelingen, tot in de eerste decennia van de 21e eeuw.
+    omschrijving_en: Comprehensive overview of the history of the church in the Low Countries, covering ecclesiastical, social and cultural developments into the first decades of the 21st century. In Dutch.
+    type: boek
+    schap: kerkgeschiedenis
+    tags: [kerkgeschiedenis, reformatie]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B094HynOb", partner: true }
 
   # ---------- Studie en verdieping (alleen NL) ----------
   # Formeel / academisch

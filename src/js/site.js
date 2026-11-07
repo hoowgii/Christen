@@ -23,7 +23,7 @@
     const items = [...blok.querySelectorAll(".item")];
     const leeg = blok.querySelector("[data-leeg]");
     const invoer = filter.querySelector("[data-filter-tekst]");
-    const keuze = { type: "", tag: "" };
+    const keuze = {}; // per filtergroep (type, schap, tag) de gekozen waarde
     let wacht;
 
     const pasToe = () => {
@@ -32,8 +32,7 @@
       items.forEach((it) => {
         const tags = it.dataset.tags ? it.dataset.tags.split("|") : [];
         const tekst = normaal(it.dataset.zoek + " " + tags.join(" "));
-        const toon = (!keuze.type || it.dataset.type === keuze.type)
-          && (!keuze.tag || tags.includes(keuze.tag))
+        const toon = Object.entries(keuze).every(([groep, w]) => !w || (groep === "tag" ? tags.includes(w) : it.dataset[groep] === w))
           && termen.every((t) => tekst.includes(t));
         it.hidden = !toon;
         if (toon) zichtbaar++;
@@ -52,33 +51,6 @@
     if (invoer) invoer.addEventListener("input", () => { clearTimeout(wacht); wacht = setTimeout(pasToe, 150); });
   });
 
-  /* ---------- Contactformulier (Formspree) ---------- */
-  // Zonder JavaScript werkt het formulier als gewone POST; hiermee blijft de bezoeker op de pagina.
-  document.querySelectorAll("[data-contact]").forEach((form) => {
-    const knop = form.querySelector("[data-contact-knop]");
-    const status = form.querySelector("[data-contact-status]");
-    const zet = (tekst, soort) => {
-      status.textContent = tekst;
-      status.className = "contact__status" + (soort ? ` contact__status--${soort}` : "");
-    };
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      form.querySelectorAll("[aria-invalid]").forEach((v) => v.removeAttribute("aria-invalid"));
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      knop.disabled = true; zet(form.dataset.bezig);
-      try {
-        const r = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-        if (r.ok) { form.reset(); zet(form.dataset.gelukt, "gelukt"); }
-        else {
-          const d = await r.json().catch(() => ({}));
-          (d.errors || []).forEach((fout) => { const v = fout.field && form.elements[fout.field]; if (v) v.setAttribute("aria-invalid", "true"); });
-          zet(form.dataset.fout, "fout");
-        }
-      } catch { zet(form.dataset.fout, "fout"); }
-      knop.disabled = false;
-    });
-  });
-
   /* ---------- Zoeken ---------- */
   const zoek = document.querySelector("[data-zoeken]");
   const indexLink = document.querySelector("link[data-zoekindex]");
@@ -86,10 +58,10 @@
 
   const lang = document.documentElement.lang === "en" ? "en" : "nl";
   const TEKST = {
-    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website, opent in nieuw tabblad)", onderwerpen: "Onderwerpen",
+    nl: { in: "In", bekijkBij: "Bekijk bij", extern: " (externe website)", onderwerpen: "Onderwerpen",
           een: "resultaat", meer: "resultaten", voor: "voor", niets: (q) => `Niets gevonden voor “${q}”. Probeer een ander woord, of bekijk alle onderwerpen.`,
           fout: "Zoeken is nu niet beschikbaar. Vernieuw de pagina en probeer het opnieuw." },
-    en: { in: "In", bekijkBij: "View at", extern: " (external website, opens in a new tab)", onderwerpen: "Topics",
+    en: { in: "In", bekijkBij: "View at", extern: " (external website)", onderwerpen: "Topics",
           een: "result", meer: "results", voor: "for", niets: (q) => `Nothing found for “${q}”. Try another word, or browse all topics.`,
           fout: "Search is not available right now. Reload the page and try again." },
   }[lang];
@@ -176,9 +148,6 @@
       voet.append(ul);
     }
     art.append(voet);
-    art.querySelectorAll("a[href^='http']").forEach((a) => {
-      if (new URL(a.href).hostname !== location.hostname) { a.target = "_blank"; a.rel = [...new Set((a.rel + " noopener noreferrer").split(" ").filter(Boolean))].join(" "); }
-    });
     return art;
   }
 

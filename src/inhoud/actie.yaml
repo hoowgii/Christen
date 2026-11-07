@@ -38,6 +38,7 @@ items:
     omschrijving: Op 29 februari 1948 werd Richard Wurmbrand door de geheime politie gearresteerd. Zijn misdaad? Het leiden van christelijke diensten en getuigen van zijn geloof. Zijn verhaal over vervolging en trouw.
     omschrijving_en: On February 29, 1948, Richard Wurmbrand was arrested by the secret police. His crime? Leading Christian worship and witnessing. His story of persecution and faithfulness.
     type: boek
+    schap: christelijk-leven
     tags: [vervolgde kerk]
     kanalen:
       - { aanbieder: Amazon, url: "https://link.amazon/B0db5M7oq", partner: true }

@@ -1,13 +1,62 @@
 # & Winkel – zie _LEESMIJ.md. Deze rubriek verzamelt automatisch alle items met 'kanalen' uit de andere rubrieken.
+# Producten die nergens anders op de site thuishoren, staan hieronder bij 'items'.
 volgorde: 10
 slug: winkel
 slug_en: shop
 naam: Winkel
 naam_en: Shop
-kort: Bijbels en boeken die we aanbevelen.
-kort_en: Bibles and books we recommend.
+kort: Bijbels, boeken en materialen die we aanbevelen.
+kort_en: Bibles, books and materials we recommend.
 intro: Alles wat op Christen& te koop is, op één plek. Je bestelt bij de winkel zelf.
 intro_en: Everything on Christen& that can be bought, in one place. You order from the shop itself.
 verzamel: winkel
 
-items: []
+# Categorieën in & Winkel (filter 'Categorie'). Elk product met 'kanalen' krijgt een 'schap' uit deze lijst.
+# De volgorde hier is ook de volgorde in de winkel.
+schappen:
+  - slug: bijbel
+    naam: Bijbel & Bijbellezen
+    naam_en: Bible & Bible reading
+  - slug: verdieping
+    naam: Geloofsleer & verdieping
+    naam_en: Doctrine & going deeper
+  - slug: kerkgeschiedenis
+    naam: Kerkgeschiedenis & Reformatie
+    naam_en: Church history & Reformation
+  - slug: christelijk-leven
+    naam: Christelijk leven
+    naam_en: Christian life
+  - slug: kerkelijk-leven
+    naam: Kerkelijk leven & toerusting
+    naam_en: Church life & equipping
+
+items:
+  - titel: "Huwelijksdagboek: Een zegel op je hart"
+    titel_en: "Marriage devotional: Een zegel op je hart"
+    omschrijving: Dagboek voor echtparen. Elke dag een Bijbeltekst of citaat met korte toelichting en suggesties voor gesprek en gebed.
+    omschrijving_en: Daily devotional for married couples. Each day a Bible verse or quotation with a short reflection and suggestions for conversation and prayer. In Dutch.
+    type: boek
+    schap: christelijk-leven
+    tags: [huwelijk, gezin, gebed, dagboek]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0bead8BO", partner: true }
+
+  - titel: "Geestelijke vorming: gesprekskaarten voor pastorale verdieping"
+    titel_en: "Geestelijke vorming: conversation cards for pastoral care"
+    omschrijving: Set van 44 gesprekskaarten met begeleidershandleiding, voor verdiepende pastorale gesprekken over geloofspraktijk, geestelijk en moreel karakter en emotioneel welzijn.
+    omschrijving_en: Set of 44 conversation cards with a leader’s guide, for deeper pastoral conversations about the practice of faith, spiritual and moral character and emotional wellbeing. In Dutch.
+    type: product
+    schap: kerkelijk-leven
+    tags: [pastoraat, kringmateriaal, heiliging]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://link.amazon/B0hDq8gUe", partner: true }
+
+  - titel: "Zij Lacht gesprekskaarten: Bijbeleditie"
+    titel_en: "Zij Lacht conversation cards: Bible edition"
+    omschrijving: Toegankelijke vragen over Bijbellezen en geloof in het dagelijks leven, voor vrouwenkringen, vriendinnen en persoonlijke reflectie.
+    omschrijving_en: Accessible questions about reading the Bible and faith in everyday life, for women’s groups, friends and personal reflection. In Dutch.
+    type: product
+    schap: kerkelijk-leven
+    tags: [kringmateriaal, bijbellezen, vrouwen]
+    kanalen:
+      - { aanbieder: Amazon, url: "https://www.amazon.nl/dp/9464251816" }

@@ -67,4 +67,10 @@
     </li>
     {% endfor %}
   </ol>
+
+  {% set lijst = T.items | metTag("kerkgeschiedenis") %}
+  {% if lijst.length %}
+  <h2 class="sectiekop">{{ KT.verderLezen }}</h2>
+  {% set toonPlek = true %}{% include "partials/itemlijst.njk" %}
+  {% endif %}
 </div>

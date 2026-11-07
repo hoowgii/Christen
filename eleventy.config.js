@@ -1,4 +1,3 @@
-import fs from "node:fs";
 import yaml from "js-yaml";
 import markdownIt from "markdown-it";
 import { HtmlBasePlugin } from "@11ty/eleventy";
@@ -41,6 +40,16 @@ export default function (eleventyConfig) {
     lijst.forEach((i) => i.tags.forEach((t) => m.set(t.key, t)));
     return [...m.values()].sort((a, b) => a.label.localeCompare(b.label));
   });
+  // & Winkel: producten op volgorde van de schappen; binnen een schap op rubriekvolgorde, dan de volgorde in het bestand
+  eleventyConfig.addFilter("opSchap", (lijst, schappen, rubrieken) => {
+    const plaats = (arr, key) => { const n = arr.findIndex((x) => x.key === key); return n < 0 ? arr.length : n; };
+    return lijst.map((i, n) => [i, n])
+      .sort((a, b) => plaats(schappen, a[0].schap) - plaats(schappen, b[0].schap)
+        || plaats(rubrieken, a[0].rubriek) - plaats(rubrieken, b[0].rubriek) || a[1] - b[1])
+      .map(([i]) => i);
+  });
+  eleventyConfig.addFilter("lijstSchappen", (lijst, schappen) =>
+    schappen.filter((s) => lijst.some((i) => i.schap === s.key)));
   const TYPEVOLGORDE = ["bijbel", "boek", "product", "app", "website", "video", "radio", "organisatie", "opleiding", "cursus", "evenement"];
   eleventyConfig.addFilter("lijstTypen", (lijst) => {
     const aanwezig = new Set(lijst.map((i) => i.type).filter(Boolean));
@@ -87,25 +96,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("zoekindex", (lijst) =>
     JSON.stringify(lijst.map(({ titel, auteur, omschrijving, url, kanalen, links, tags, plek }) =>
       ({ titel, auteur, omschrijving, url, kanalen, links, tags: tags.map(({ label, url }) => ({ label, url })), plek }))));
-
-  // ---------- Externe links altijd in een nieuw tabblad ----------
-  // Elke <a> naar een ander domein krijgt target="_blank" en rel="noopener noreferrer"
-  // (bestaande rel-waarden zoals "sponsored" blijven behouden).
-  const eigenHost = new URL(yaml.load(fs.readFileSync("src/_data/site.yaml", "utf8")).url).hostname.replace(/^www\./, "");
-  eleventyConfig.addTransform("externeLinks", function (inhoud) {
-    if (!(this.page.outputPath || "").endsWith(".html")) return inhoud;
-    return inhoud.replace(/<a\b([^>]*?)\shref="(https?:\/\/[^"]+)"([^>]*)>/g, (tag, voor, href, na) => {
-      let host;
-      try { host = new URL(href).hostname.replace(/^www\./, ""); } catch { return tag; }
-      if (host === eigenHost) return tag;
-      let attrs = voor + na;
-      const relMatch = attrs.match(/\srel="([^"]*)"/);
-      const rel = new Set((relMatch ? relMatch[1] : "").split(/\s+/).filter(Boolean));
-      rel.add("noopener"); rel.add("noreferrer");
-      attrs = attrs.replace(/\srel="[^"]*"/, "").replace(/\starget="[^"]*"/, "");
-      return `<a${attrs} href="${href}" target="_blank" rel="${[...rel].join(" ")}">`;
-    });
-  });
 
   return {
     dir: { input: "src", output: "_site" },
