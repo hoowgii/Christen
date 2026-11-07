@@ -1,5 +1,14 @@
 // Christen& – menu, filters en zoeken. Geen externe afhankelijkheden.
 (() => {
+  /* ---------- Externe links openen in een nieuw tabblad ---------- */
+  const nieuweTab = (root) => root.querySelectorAll("a[href]").forEach((a) => {
+    if (a.hostname && a.hostname !== location.hostname) {
+      a.target = "_blank";
+      if (!/\bnoopener\b/.test(a.rel)) a.rel = (a.rel + " noopener").trim();
+    }
+  });
+  nieuweTab(document);
+
   /* ---------- Menu (mobiel/tablet) ---------- */
   const knop = document.querySelector(".menuknop");
   const menu = document.getElementById("hoofdmenu");
@@ -164,6 +173,7 @@
       ? `${hits.length} ${hits.length === 1 ? TEKST.een : TEKST.meer} ${TEKST.voor} “${q.trim()}”`
       : TEKST.niets(q.trim());
     hits.forEach((i) => uit.append(kaart(i)));
+    nieuweTab(uit);
   }
 
   fetch(indexLink.href)

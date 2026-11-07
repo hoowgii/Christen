@@ -1,7 +1,7 @@
 {% macro kaart(item, T, toonPlek) %}
 <article class="item" data-tags="{{ item.tagKeys | join('|') }}" data-type="{{ item.type }}"{% if item.schap %} data-schap="{{ item.schap }}"{% endif %} data-zoek="{{ [item.titel, item.auteur, item.omschrijving] | join(' ') | lower }}">
   <h3 class="item__titel">
-    {%- if item.url and not item.kanalen.length %}<a href="{{ item.url }}" rel="noopener">{{ item.titel }}</a>{% else %}{{ item.titel }}{% endif -%}
+    {%- if item.url and not item.kanalen.length %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.titel }}</a>{% else %}{{ item.titel }}{% endif -%}
   </h3>
   {% if item.auteur %}<p class="item__auteur">{{ item.auteur }}</p>{% endif %}
   <p class="item__tekst">{{ item.omschrijving }}</p>
@@ -9,7 +9,7 @@
   {% if item.links.length %}
   <ul class="item__extra">
     {% for k in item.links %}
-    <li><a href="{{ k.url }}" rel="noopener{% if k.partner %} sponsored{% endif %}">{{ k.tekst }}</a>{% if k.aanbieder %} <span class="item__extra-bron">({{ k.aanbieder }})</span>{% endif %}<span class="sr"> {{ T.t.extern }}</span></li>
+    <li><a href="{{ k.url }}" target="_blank" rel="noopener{% if k.partner %} sponsored{% endif %}">{{ k.tekst }}</a>{% if k.aanbieder %} <span class="item__extra-bron">({{ k.aanbieder }})</span>{% endif %}<span class="sr"> {{ T.t.extern }}</span></li>
     {% endfor %}
   </ul>
   {% endif %}
@@ -17,11 +17,11 @@
     {% if item.kanalen.length %}
       <ul class="item__kanalen">
         {% for k in item.kanalen %}
-        <li><a class="knop knop--rand" href="{{ k.url }}" rel="noopener{% if k.partner %} sponsored{% endif %}">{{ T.t.bekijkBij }} {{ k.aanbieder }}<span class="sr"> {{ T.t.extern }}</span></a></li>
+        <li><a class="knop knop--rand" href="{{ k.url }}" target="_blank" rel="noopener{% if k.partner %} sponsored{% endif %}">{{ T.t.bekijkBij }} {{ k.aanbieder }}<span class="sr"> {{ T.t.extern }}</span></a></li>
         {% endfor %}
       </ul>
     {% elif item.url %}
-      <a class="item__domein" href="{{ item.url }}" rel="noopener" tabindex="-1" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>{{ item.url | domein }}</a>
+      <a class="item__domein" href="{{ item.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>{{ item.url | domein }}</a>
     {% endif %}
     {% if item.tags.length %}
       <ul class="item__tags" aria-label="{{ T.t.onderwerpen }}">
